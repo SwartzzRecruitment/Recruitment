@@ -48,7 +48,7 @@
     <script>
         // Fetch and load the privacy policy content from the JSON file
         function loadPrivacyPolicy() {
-            fetch('/json/policy.json')  // Ensure this path is correct and accessible
+            fetch('policy.json')  // Ensure this path is correct and accessible
                 .then(response => response.json())
                 .then(data => {
                     // Insert the main title dynamically
@@ -169,6 +169,7 @@
 
 </body>
 </html>
+
 
 
 
