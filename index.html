@@ -32,9 +32,16 @@
             font-size: 14px;
             cursor: pointer;
             border-radius: 5px;
+            margin: 0 5px;
         }
         .cookie-consent button:hover {
             background-color: #005fa3;
+        }
+        .cookie-consent .deny-btn {
+            background-color: #cc3333;
+        }
+        .cookie-consent .deny-btn:hover {
+            background-color: #aa2929;
         }
     </style>
 
@@ -54,9 +61,15 @@
             document.getElementById("cookieConsent").style.display = "none";
         }
 
+        function denyCookies() {
+            document.cookie = "cookies_accepted=false; path=/; max-age=31536000"; // Deny cookies for 1 year
+            document.getElementById("cookieConsent").style.display = "none";
+        }
+
         function checkCookieConsent() {
             let cookiesAccepted = document.cookie.indexOf("cookies_accepted=true") !== -1;
-            if (cookiesAccepted) {
+            let cookiesDenied = document.cookie.indexOf("cookies_accepted=false") !== -1;
+            if (cookiesAccepted || cookiesDenied) {
                 document.getElementById("cookieConsent").style.display = "none";
             }
         }
@@ -144,10 +157,12 @@
     <div class="cookie-consent" id="cookieConsent">
         <p>We use cookies to ensure that we give you the best experience on our website. By clicking "Accept", you agree to our use of cookies. <a href="cookie-policy.html">Learn More</a></p>
         <button onclick="acceptCookies()">Accept</button>
+        <button class="deny-btn" onclick="denyCookies()">Deny</button>
     </div>
 
 </body>
 </html>
+
 
 
 
