@@ -1,27 +1,167 @@
-<section id="privacy-policy" style="display: none;">
-    <div class="container">
-        <h2 id="privacy-policy-title">Privacy Policy</h2>
-        <div id="privacy-policy-content">
-            <h3>Information We Collect</h3>
-            <p>We collect personal data including your name, email address, phone number, and other information you provide when contacting us. We may also collect non-personal information through cookies and analytics tools about how you use our website.</p>
-            
-            <h3>How We Use Your Information</h3>
-            <p>The information we collect is used to respond to your inquiries, provide recruitment services, and improve our website. We may also use your data for marketing purposes, but only if you have given us explicit consent.</p>
-            
-            <h3>Cookies</h3>
-            <p>Our website uses cookies to enhance your experience and gather analytics data. You can control the use of cookies through your browser settings.</p>
-            
-            <h3>Security</h3>
-            <p>We take reasonable precautions to protect your personal data from unauthorized access, disclosure, alteration, or destruction.</p>
-            
-            <h3>Your Rights</h3>
-            <p>You have the right to access, correct, or delete your personal information. You can also withdraw your consent for marketing purposes at any time.</p>
-            
-            <h3>Contact Us</h3>
-            <p>If you have any questions about this privacy policy or how we handle your data, please contact us at <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a>.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swartzz Recruitment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
+    
+    <!-- Cookie Consent CSS -->
+    <style>
+        .cookie-consent {
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            z-index: 9999;
+            font-size: 14px;
+        }
+        .cookie-consent a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .cookie-consent button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+        .cookie-consent button:hover {
+            background-color: #005fa3;
+        }
+        .cookie-consent .deny-btn {
+            background-color: #cc3333;
+        }
+        .cookie-consent .deny-btn:hover {
+            background-color: #aa2929;
+        }
+    </style>
+
+    <script>
+        function togglePrivacyPolicy() {
+            var policySection = document.getElementById("privacy-policy");
+            if (policySection.style.display === "none" || policySection.style.display === "") {
+                policySection.style.display = "block";
+            } else {
+                policySection.style.display = "none";
+            }
+        }
+
+        // Cookie consent functions
+        function acceptCookies() {
+            document.cookie = "cookies_accepted=true; path=/; max-age=31536000"; // Cookie expires in 1 year
+            document.getElementById("cookieConsent").style.display = "none";
+        }
+
+        function denyCookies() {
+            document.cookie = "cookies_accepted=false; path=/; max-age=31536000"; // Deny cookies for 1 year
+            document.getElementById("cookieConsent").style.display = "none";
+        }
+
+        function checkCookieConsent() {
+            let cookiesAccepted = document.cookie.indexOf("cookies_accepted=true") !== -1;
+            let cookiesDenied = document.cookie.indexOf("cookies_accepted=false") !== -1;
+            if (cookiesAccepted || cookiesDenied) {
+                document.getElementById("cookieConsent").style.display = "none";
+            }
+        }
+
+        window.onload = function() {
+            checkCookieConsent();
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Welcome to Swartzz Recruitment</h1>
+            <p>Connecting businesses with reliable talent.</p>
+            <img src="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20logo.jpeg?raw=true" alt="Swartzz Recruitment" style="width: 500px; height: auto;">
         </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Swartzz Recruitment, we specialize in connecting businesses with top-tier cybersecurity professionals who are equipped to safeguard digital assets, mitigate risks, and strengthen security infrastructures. Our expertise ensures that organizations can confidently navigate the ever-evolving landscape of cyber threats with the right talent by their side.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For inquiries, collaborations, or to learn more about our recruitment services, feel free to reach out:</p>
+            <ul>
+                <li>Email: <a href="mailto:swartzzinc@gmail.com" style="font-size: 16px;">swartzzinc@gmail.com</a></li>
+                <li>Phone: <a href="tel:+447385166005" style="font-size: 16px;">+447385166005</a></li>
+                <li>
+                    <!-- LinkedIn with an Icon -->
+                    <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank" class="linkedin-link">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Swartzz Recruitment. All Rights Reserved.</p>
+            <p style="text-align: right;">
+                <a href="javascript:void(0);" onclick="togglePrivacyPolicy()" style="color: #fff; text-decoration: none;">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy-policy" style="display: none;">
+        <div class="container">
+            <h2>Privacy Policy</h2>
+            <div>
+                <h3>Information We Collect</h3>
+                <p>We collect personal data including your name, email address, phone number, and other information you provide when contacting us. We may also collect non-personal information through cookies and analytics tools about how you use our website.</p>
+                
+                <h3>How We Use Your Information</h3>
+                <p>The information we collect is used to respond to your inquiries, provide recruitment services, and improve our website. We may also use your data for marketing purposes, but only if you have given us explicit consent.</p>
+
+                <h3>Cookies</h3>
+                <p>Our website uses cookies to enhance your experience and gather analytics data. You can control the use of cookies through your browser settings.</p>
+
+                <h3>Security</h3>
+                <p>We take reasonable precautions to protect your personal data from unauthorized access, disclosure, alteration, or destruction.</p>
+
+                <h3>Your Rights</h3>
+                <p>You have the right to access, correct, or delete your personal information. You can also withdraw your consent for marketing purposes at any time.</p>
+
+                <h3>Contact Us</h3>
+                <p>If you have any questions about this privacy policy or how we handle your data, please contact us at swartzzinc@gmail.com.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to ensure that we give you the best experience on our website. By clicking "Accept", you agree to our use of cookies. <a href="cookie-policy.html">Learn More</a></p>
+        <button onclick="acceptCookies()">Accept</button>
+        <button class="deny-btn" onclick="denyCookies()">Deny</button>
     </div>
-</section>
+
+</body>
+</html>
+
 
 
 
