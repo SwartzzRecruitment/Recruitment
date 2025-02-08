@@ -61,6 +61,7 @@ header p {
 
 .contact ul {
     list-style-type: none;
+    padding-left: 0;
 }
 
 .contact ul li {
@@ -71,6 +72,7 @@ header p {
 .contact a {
     color: #0077cc;
     text-decoration: none;
+    font-size: 16px; /* Consistent font size for email & phone */
 }
 
 /* Footer */
