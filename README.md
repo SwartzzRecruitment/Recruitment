@@ -1,5 +1,5 @@
 # Swartzz Recruitment
-Welcome to the **Swartzz Recruitment** website! This website serves as the online presence for our recruitment business, specializing in connecting businesses with reliable talent, with a focus on **cybersecurity**.
+Welcome to **Swartzz Recruitment**! This website serves as the online presence for our recruitment business, specializing in connecting businesses with reliable talent, with a focus on **cybersecurity**.
 
 ## About Us
 
