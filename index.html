@@ -6,8 +6,7 @@
     <title>Swartzz Recruitment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
-    
-    <!-- Cookie Consent CSS -->
+
     <style>
         .cookie-consent {
             background-color: #333;
@@ -48,7 +47,7 @@
     <script>
         // Fetch and load the privacy policy content from the JSON file
         function loadPrivacyPolicy() {
-            fetch('policy.json')  // Ensure this path is correct and accessible
+            fetch('/policy.json')  // Path to your policy.json file in the root directory
                 .then(response => response.json())
                 .then(data => {
                     // Insert the main title dynamically
