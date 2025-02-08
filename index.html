@@ -6,6 +6,38 @@
     <title>Swartzz Recruitment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
+    
+    <!-- Cookie Consent CSS -->
+    <style>
+        .cookie-consent {
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            z-index: 9999;
+            font-size: 14px;
+        }
+        .cookie-consent a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .cookie-consent button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cookie-consent button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+
     <script>
         function togglePrivacyPolicy() {
             var policySection = document.getElementById("privacy-policy");
@@ -15,6 +47,21 @@
                 policySection.style.display = "none";
             }
         }
+
+        // Cookie consent functions
+        function acceptCookies() {
+            document.cookie = "cookies_accepted=true; path=/; max-age=31536000"; // Cookie expires in 1 year
+            document.getElementById("cookieConsent").style.display = "none";
+        }
+
+        function checkCookieConsent() {
+            let cookiesAccepted = document.cookie.indexOf("cookies_accepted=true") !== -1;
+            if (cookiesAccepted) {
+                document.getElementById("cookieConsent").style.display = "none";
+            }
+        }
+
+        window.onload = checkCookieConsent;
     </script>
 </head>
 <body>
@@ -93,7 +140,14 @@
         </div>
     </section>
 
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to ensure that we give you the best experience on our website. By clicking "Accept", you agree to our use of cookies. <a href="cookie-policy.html">Learn More</a></p>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+
 </body>
 </html>
+
 
 
