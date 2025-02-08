@@ -48,11 +48,13 @@
     <script>
         // Fetch and load the privacy policy content from the JSON file
         function loadPrivacyPolicy() {
-            fetch('/json/policy.json')
+            fetch('/json/policy.json')  // Change this path if needed
                 .then(response => response.json())
                 .then(data => {
-                    // Insert data into the HTML dynamically
+                    // Insert the main title dynamically
                     document.getElementById("privacy-policy-title").textContent = data.privacyPolicy.title || "Privacy Policy";
+                    
+                    // Loop through sections and insert them dynamically
                     Object.keys(data.privacyPolicy).forEach(section => {
                         if (section !== "title") {
                             const sectionTitle = data.privacyPolicy[section].title;
