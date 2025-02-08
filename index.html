@@ -6,6 +6,16 @@
     <title>Swartzz Recruitment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
+    <script>
+        function togglePrivacyPolicy() {
+            var policySection = document.getElementById("privacy-policy");
+            if (policySection.style.display === "none" || policySection.style.display === "") {
+                policySection.style.display = "block";
+            } else {
+                policySection.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -49,7 +59,7 @@
         <div class="container">
             <p>&copy; 2025 Swartzz Recruitment. All Rights Reserved.</p>
             <p style="text-align: right;">
-                <a href="#privacy-policy" style="color: #fff; text-decoration: none;">Privacy Policy</a>
+                <a href="javascript:void(0);" onclick="togglePrivacyPolicy()" style="color: #fff; text-decoration: none;">Privacy Policy</a>
             </p>
         </div>
     </footer>
@@ -85,4 +95,5 @@
 
 </body>
 </html>
+
 
