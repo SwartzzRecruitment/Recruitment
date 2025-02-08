@@ -84,10 +84,16 @@ header img {
 
 /* LinkedIn Icon */
 .contact a img {
-    width: 30px;
+    width: 30px;  /* Reverted back to the original size */
     height: 30px;
     vertical-align: middle;
     margin-right: 10px; /* Space between icon and text */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* LinkedIn Icon Hover Effect */
+.contact a:hover img {
+    transform: scale(1.2);  /* Icon will grow to 120% when hovered */
 }
 
 /* Footer */
