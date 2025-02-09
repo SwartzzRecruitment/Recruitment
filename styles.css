@@ -39,7 +39,7 @@ header {
 }
 
 header h1, header p {
-    animation: fadeIn 2s ease-out; /* Apply fade-in animation */
+    animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation and keep the final state */
     opacity: 0; /* Ensure they start hidden */
 }
 
