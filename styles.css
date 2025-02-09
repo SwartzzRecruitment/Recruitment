@@ -52,7 +52,7 @@ header img {
 
 .about-us h2 {
     font-size: 2em;
-    color: #0077cc;  /* Original blue */
+    color: #0077cc;
 }
 
 /* Contact Section */
@@ -63,7 +63,7 @@ header img {
 
 .contact h2 {
     font-size: 2em;
-    color: #0077cc;  /* Original blue */
+    color: #0077cc;
 }
 
 .contact ul {
@@ -77,7 +77,7 @@ header img {
 }
 
 .contact a {
-    color: #0077cc;  /* Original blue */
+    color: #0077cc;
     text-decoration: none;
     font-size: 16px; /* Consistent font size for email & phone */
 }
@@ -102,21 +102,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-}
-
-/* Button Style for Links (Added for consistency) */
-.contact a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0077cc;  /* Original blue */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.contact a.button:hover {
-    background-color: #005fa3;  /* Darker shade of blue */
 }
 
 /* Mobile-Friendly Image Styling */
@@ -144,41 +129,5 @@ footer {
 
     .contact a {
         font-size: 14px;
-    }
-
-    .contact a.button {
-        font-size: 14px;
-        padding: 8px 16px;  /* Adjust button size for smaller screens */
-    }
-}
-
-/* Improved Accessibility: Link Hover */
-.contact a:hover {
-    color: #005fa3;  /* Darker shade of blue */
-    text-decoration: underline;
-}
-
-/* Contrast for Better Accessibility */
-body {
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-header, .about-us, .contact, footer {
-    color: #333;
-}
-
-header h1, .about-us h2, .contact h2 {
-    color: #0077cc;  /* Revert to original blue */
-}
-
-/* Ensure Better Contrast on Small Screens */
-@media screen and (max-width: 768px) {
-    .contact a {
-        font-size: 16px;
-    }
-
-    .about-us h2, .contact h2 {
-        font-size: 1.8em;
     }
 }
