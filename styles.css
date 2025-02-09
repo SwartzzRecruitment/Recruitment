@@ -48,6 +48,7 @@ header img {
 .about-us {
     background: #fff;
     padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
 }
 
 .about-us h2 {
@@ -59,6 +60,7 @@ header img {
 .contact {
     background: #f9f9f9;
     padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
 }
 
 .contact h2 {
