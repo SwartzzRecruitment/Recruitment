@@ -38,9 +38,11 @@ header {
     }
 }
 
+/* Apply animation to h1 and p */
 header h1, header p {
-    animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation and keep the final state */
-    opacity: 0; /* Ensure they start hidden */
+    opacity: 0; /* Start with text hidden */
+    animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation */
+    animation-fill-mode: forwards; /* Ensure the final state (opacity: 1) is maintained */
 }
 
 header h1 {
@@ -130,7 +132,8 @@ footer {
 
     header h1, header p {
         animation: fadeIn 2s ease-out forwards;
-        opacity: 1; /* Ensures they stay visible after animation */
+        animation-fill-mode: forwards; /* Ensure it stays visible after the animation */
+        opacity: 1; /* Ensure the text remains visible */
     }
 
     header h1 {
