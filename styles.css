@@ -48,8 +48,6 @@ header img {
 .about-us {
     background: #fff;
     padding: 30px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
-    border-radius: 8px;  /* Rounded corners for a card-like feel */
 }
 
 .about-us h2 {
@@ -61,7 +59,6 @@ header img {
 .contact {
     background: #f9f9f9;
     padding: 30px 0;
-    border-top: 2px solid #f0f0f0;  /* Divider */
 }
 
 .contact h2 {
@@ -83,34 +80,11 @@ header img {
     color: #0077cc;
     text-decoration: none;
     font-size: 16px; /* Consistent font size for email & phone */
-    position: relative;
-}
-
-.contact a:hover {
-    color: #005fa3;
-    text-decoration: underline;
-}
-
-/* Underline Animation */
-.contact a:hover::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #005fa3;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transition: transform 0.25s ease-in-out;
-}
-
-.contact a:hover::after {
-    transform: scaleX(1);
 }
 
 /* LinkedIn Icon */
 .contact a img {
-    width: 30px;  /* Original size */
+    width: 30px;  /* Reverted back to the original size */
     height: 30px;
     vertical-align: middle;
     margin-right: 10px; /* Space between icon and text */
@@ -120,23 +94,6 @@ header img {
 /* LinkedIn Icon Hover Effect */
 .contact a:hover img {
     transform: scale(1.2);  /* Icon will grow to 120% when hovered */
-}
-
-/* Button Style for Links */
-.contact a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0077cc;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.contact a.button:hover {
-    background-color: #005fa3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
-    transform: translateY(-2px); /* Lift effect */
 }
 
 /* Footer */
@@ -172,46 +129,5 @@ footer {
 
     .contact a {
         font-size: 14px;
-    }
-
-    .contact a.button {
-        font-size: 14px;
-        padding: 8px 16px;  /* Adjust button size for smaller screens */
-    }
-}
-
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Improved Accessibility: Link Hover */
-.contact a:hover {
-    color: #005fa3;
-    text-decoration: underline;
-}
-
-/* Contrast for Better Accessibility */
-body {
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-header, .about-us, .contact, footer {
-    color: #333;
-}
-
-header h1, .about-us h2, .contact h2 {
-    color: #005fa3;  /* Darken the blue for better contrast */
-}
-
-/* Ensure Better Contrast on Small Screens */
-@media screen and (max-width: 768px) {
-    .contact a {
-        font-size: 16px;
-    }
-
-    .about-us h2, .contact h2 {
-        font-size: 1.8em;
     }
 }
