@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
     
-    <!-- Cookie Consent CSS -->
     <style>
         .cookie-consent {
             background-color: #333;
@@ -48,7 +47,11 @@
     <script>
         function togglePrivacyPolicy() {
             var policySection = document.getElementById("privacy-policy");
-            policySection.style.display = (policySection.style.display === "none" || policySection.style.display === "") ? "block" : "none";
+            if (policySection.style.display === "none" || policySection.style.display === "") {
+                policySection.style.display = "block";
+            } else {
+                policySection.style.display = "none";
+            }
         }
 
         function acceptCookies() {
@@ -75,6 +78,7 @@
     </script>
 </head>
 <body>
+
     <header>
         <div class="container">
             <h1>Welcome to Swartzz Recruitment</h1>
@@ -86,55 +90,69 @@
     <section class="about-us">
         <div class="container">
             <h2>About Us</h2>
-            <p>At Swartzz Recruitment, we specialize in connecting businesses with top-tier cybersecurity professionals.</p>
-        </div>
-    </section>
-
-    <section class="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <details>
-                <summary>What industries do you recruit for?</summary>
-                <p>We specialize in cybersecurity and welding (MIG & TIG) roles, along with other technical industries.</p>
-            </details>
-            <details>
-                <summary>How can I apply for a job through Swartzz Recruitment?</summary>
-                <p>We do not list jobs on our website. Instead, we personally reach out to candidates or you can contact us directly.</p>
-            </details>
-            <details>
-                <summary>How can employers partner with you?</summary>
-                <p>Employers can reach out to us via email or phone to discuss their hiring needs.</p>
-            </details>
+            <p>At Swartzz Recruitment, we specialize in connecting businesses with top-tier cybersecurity professionals who are equipped to safeguard digital assets, mitigate risks, and strengthen security infrastructures.</p>
         </div>
     </section>
 
     <section class="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a></p>
-            <p>Phone: <a href="tel:+447385166005">+447385166005</a></p>
-            <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+            <p>For inquiries, collaborations, or to learn more about our recruitment services, feel free to reach out:</p>
+            <ul>
+                <li>Email: <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a></li>
+                <li>Phone: <a href="tel:+447385166005">+447385166005</a></li>
+                <li>
+                    <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <h3>What industries do you specialize in?</h3>
+            <p>We focus on cybersecurity and MIG & TIG welding recruitment, but we also handle various other sectors.</p>
+            <h3>How do I apply for jobs through Swartzz Recruitment?</h3>
+            <p>We do not list jobs on our website. Instead, we connect with candidates directly. Feel free to contact us via email or phone.</p>
+            <h3>Do you work with international clients?</h3>
+            <p>Yes, we assist businesses and professionals globally.</p>
+            <h3>Is there a fee for job seekers?</h3>
+            <p>No, our services are free for job seekers.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 Swartzz Recruitment. All Rights Reserved.</p>
-            <a href="javascript:void(0);" onclick="togglePrivacyPolicy()">Privacy Policy</a>
+            <p style="text-align: right;">
+                <a href="javascript:void(0);" onclick="togglePrivacyPolicy()">Privacy Policy</a>
+            </p>
         </div>
     </footer>
 
     <section id="privacy-policy" style="display: none;">
         <div class="container">
             <h2>Privacy Policy</h2>
-            <p>We collect personal data to provide our services. You have the right to access, correct, or delete your information.</p>
+            <h3>Information We Collect</h3>
+            <p>We collect personal data including your name, email, phone number, and any information you provide. We also collect non-personal data through cookies.</p>
+            <h3>How We Use Your Information</h3>
+            <p>Your information is used to respond to inquiries and improve our services.</p>
+            <h3>Cookies</h3>
+            <p>We use cookies for site functionality and analytics.</p>
+            <h3>Security</h3>
+            <p>We take precautions to protect your data.</p>
+            <h3>Your Rights</h3>
+            <p>You may request access, correction, or deletion of your data.</p>
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a></p>
         </div>
     </section>
 
     <div class="cookie-consent" id="cookieConsent">
-        <p>We use cookies to improve your experience. <a href="cookie-policy.html">Learn More</a></p>
+        <p>We use cookies to enhance your experience. <a href="cookie-policy.html">Learn More</a></p>
         <button onclick="acceptCookies()">Accept</button>
         <button class="deny-btn" onclick="denyCookies()">Deny</button>
     </div>
