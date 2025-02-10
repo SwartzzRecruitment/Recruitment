@@ -28,19 +28,14 @@ nav {
 
 nav .container {
     display: flex; /* Use flexbox to align logo and links */
-    justify-content: space-between; /* Space between logo and links */
+    justify-content: flex-end; /* Align links to the right */
     align-items: center; /* Vertically center items */
 }
 
 nav .logo {
     height: 40px; /* Set logo height (adjust as needed) */
     width: auto; /* Keep aspect ratio */
-}
-
-nav .nav-links {
-    display: flex; /* Align links side by side */
-    justify-content: flex-end; /* Align links to the right */
-    flex-grow: 1; /* Make sure it takes the remaining space */
+    margin-left: auto; /* Push logo to the left side */
 }
 
 nav a {
@@ -217,4 +212,3 @@ footer {
 .cookie-consent.hide {
     display: none;
 }
-
