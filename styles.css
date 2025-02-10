@@ -20,11 +20,12 @@ body {
     padding: 20px;
 }
 
-/* Logo Positioned to the Left */
+/* Logo Positioned to the Top Left */
 .logo-container {
     position: absolute; /* Fixed position relative to the screen */
     top: 20px;
     left: 20px;
+    z-index: 10; /* Keep the logo above everything else */
 }
 
 .logo {
@@ -38,6 +39,8 @@ nav {
     padding: 10px 0;
     display: flex;
     justify-content: flex-end; /* Align links to the right */
+    position: relative; /* Needed for z-index stacking */
+    z-index: 5; /* Keeps links behind the logo */
 }
 
 /* Navigation Links Container */
