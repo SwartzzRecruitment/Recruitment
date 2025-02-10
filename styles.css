@@ -171,7 +171,7 @@ footer {
     /* Adjust logo position for mobile */
     .logo-container {
         position: absolute;
-        top: 10px;
+        top: 5px;
         left: 20px;
         z-index: 10;
     }
@@ -244,4 +244,3 @@ footer {
 .cookie-consent.hide {
     display: none;
 }
-
