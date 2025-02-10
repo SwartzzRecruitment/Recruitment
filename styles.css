@@ -193,3 +193,34 @@ footer {
         margin: 0; /* Remove any margin */
     }
 }
+
+/* Cookie Consent */
+.cookie-consent {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+
+.cookie-consent button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.cookie-consent button.deny-btn {
+    background-color: #cc0000;
+}
+
+/* Hide Cookie Consent Bar After Clicking */
+.cookie-consent.hide {
+    display: none;
+}
