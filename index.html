@@ -45,8 +45,13 @@
         /* Navigation Bar Styling */
         nav {
             background-color: #0077cc;
-            padding: 15px;
-            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 10;
+            text-align: right;
         }
         nav a {
             color: white;
@@ -56,6 +61,17 @@
         }
         nav a:hover {
             text-decoration: underline;
+        }
+        /* Adjust the header and image styling */
+        header {
+            padding-top: 60px;
+            text-align: center;
+        }
+        header img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin-top: 20px;
         }
     </style>
 
@@ -103,8 +119,8 @@
     <header>
         <div class="container">
             <p>Connecting businesses with reliable talent.</p>
-            <img src="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20logo.jpeg?raw=true" alt="Swartzz Recruitment" style="width: 500px; height: auto;">
         </div>
+        <img src="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20logo.jpeg?raw=true" alt="Swartzz Recruitment">
     </header>
 
     <section id="about-us" class="about-us">
