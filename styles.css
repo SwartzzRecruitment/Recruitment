@@ -61,11 +61,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Header with Video */
+/* Header with Image */
 .header-image-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Makes the video full screen */
+    height: 100vh; /* Makes the image full screen */
     overflow: hidden;
 }
 
