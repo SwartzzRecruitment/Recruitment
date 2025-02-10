@@ -27,7 +27,9 @@ nav {
 }
 
 nav .container {
-    text-align: right; /* Align the links to the right */
+    display: flex; /* Use flexbox to align logo and links */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically center items */
 }
 
 nav a {
@@ -35,6 +37,12 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.2em;
+}
+
+/* Logo */
+nav .logo {
+    height: 40px; /* Set logo height (adjust as needed) */
+    width: auto; /* Keep aspect ratio */
 }
 
 /* Navigation Links on Hover */
