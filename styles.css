@@ -96,7 +96,7 @@ header .container {
     background: #fff; /* Solid white background */
     padding: 30px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
-    margin-top: -1px; /* Adjust this if the gap persists */
+    margin-top: 20px; /* Added margin to prevent overlap with the logo */
 }
 
 .about-us h2 {
@@ -170,11 +170,16 @@ footer {
 
     /* Adjusting text inside header */
     header h1 {
-        font-size: 2em;
+        font-size: 1.8em; /* Reduced text size */
     }
 
     header p {
         font-size: 1em;
+    }
+
+    /* Adjust font size for navigation links */
+    nav a {
+        font-size: 1em; /* Smaller font size for mobile */
     }
 
     .about-us h2, .contact h2 {
@@ -193,6 +198,11 @@ footer {
     .about-us {
         margin-top: 0; /* No gap above the About Us section */
         padding-top: 0; /* Remove any extra padding */
+    }
+
+    /* Adjust padding for the About Us section on mobile */
+    .about-us {
+        padding: 20px 0; /* Reduced padding to fit better */
     }
 
     .header-image-container {
@@ -231,4 +241,3 @@ footer {
 .cookie-consent.hide {
     display: none;
 }
-
