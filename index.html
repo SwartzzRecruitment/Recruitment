@@ -99,32 +99,7 @@
         </div>
     </section>
 
-    <div class="cookie-consent" id="cookieConsent">
-        <p>We use cookies to enhance your experience.</p>
-        <button onclick="acceptCookies()">Accept</button>
-        <button class="deny-btn" onclick="denyCookies()">Deny</button>
-    </div>
-
     <script>
-        function acceptCookies() {
-            document.getElementById('cookieConsent').classList.add('hide');
-            // Optionally, store a cookie to remember the choice
-            localStorage.setItem('cookieConsent', 'accepted');
-        }
-
-        function denyCookies() {
-            document.getElementById('cookieConsent').classList.add('hide');
-            // Optionally, store a cookie to remember the choice
-            localStorage.setItem('cookieConsent', 'denied');
-        }
-
-        // Check if user has already accepted or denied cookies
-        window.onload = function() {
-            if (localStorage.getItem('cookieConsent')) {
-                document.getElementById('cookieConsent').classList.add('hide');
-            }
-        }
-
         function togglePrivacyPolicy() {
             const privacySection = document.getElementById('privacy-policy');
             privacySection.style.display = (privacySection.style.display === 'none' || privacySection.style.display === '') ? 'block' : 'none';
