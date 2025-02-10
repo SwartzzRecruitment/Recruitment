@@ -40,17 +40,21 @@
         /* Header Section */
         header {
             background-color: #0077cc;
-            padding: 20px 0;
+            padding: 40px 0; /* Increase padding for proper height */
             text-align: center;
-            margin-top: 60px; /* Adjust margin to fit under navbar */
+            margin-top: 60px; /* Ensures header starts below the fixed navbar */
+            height: 160px; /* Set a minimum height for the header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         header p {
             font-size: 20px;
             color: white;
-            margin-bottom: 15px;
+            margin-bottom: 0;
         }
 
-        /* Image Section */
+        /* Image Section Below Header */
         .header-image-container {
             width: 100%;
             text-align: center;
