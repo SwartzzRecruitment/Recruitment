@@ -81,6 +81,7 @@
         </div>
     </footer>
 
+    <!-- Privacy Policy Section -->
     <section id="privacy-policy" style="display: none;">
         <div class="container">
             <h2>Privacy Policy</h2>
@@ -99,10 +100,38 @@
         </div>
     </section>
 
+    <!-- Cookie Consent Bar -->
     <div class="cookie-consent" id="cookieConsent">
         <p>We use cookies to enhance your experience. <a href="cookie-policy.html">Learn More</a></p>
         <button onclick="acceptCookies()">Accept</button>
         <button class="deny-btn" onclick="denyCookies()">Deny</button>
     </div>
+
+    <!-- Scripts -->
+    <script>
+        function togglePrivacyPolicy() {
+            var privacyPolicy = document.getElementById('privacy-policy');
+            if (privacyPolicy.style.display === "none") {
+                privacyPolicy.style.display = "block";
+            } else {
+                privacyPolicy.style.display = "none";
+            }
+        }
+
+        function acceptCookies() {
+            document.getElementById('cookieConsent').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        function denyCookies() {
+            document.getElementById('cookieConsent').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'false');
+        }
+
+        // Check if cookies have already been accepted or denied
+        if (localStorage.getItem('cookiesAccepted') !== null) {
+            document.getElementById('cookieConsent').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
