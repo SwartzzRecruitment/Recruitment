@@ -176,11 +176,12 @@ footer {
         font-size: 14px; /* Slightly smaller font for links */
     }
 
-    /* Stack About Us and Contact Us Sections */
+    /* Keep About Us and Contact Us Sections Side by Side on Mobile */
     .about-us, .contact {
-        display: block; /* Stacks them vertically on mobile */
-        width: 100%; /* Full width on mobile */
+        display: inline-block; /* Ensures the sections stay side by side */
+        width: 48%; /* Adjust width to fit both sections */
         margin-top: 20px;
+        vertical-align: top; /* Align them to the top */
     }
 
     /* Reduce height of the header image on mobile */
