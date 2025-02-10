@@ -157,23 +157,23 @@ footer {
     }
 
     header h1 {
-        font-size: 2em;
+        font-size: 1.8em; /* Slightly smaller on mobile */
     }
 
     header p {
-        font-size: 1em;
+        font-size: 0.9em; /* Smaller font for paragraph */
     }
 
     .about-us h2, .contact h2 {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Smaller headings on mobile */
     }
 
     .contact ul li {
-        font-size: 1em;
+        font-size: 1em; /* Adjust font size for list items */
     }
 
     .contact a {
-        font-size: 14px;
+        font-size: 14px; /* Slightly smaller font for links */
     }
 
     /* Stack About Us and Contact Us Sections */
@@ -181,6 +181,11 @@ footer {
         display: block; /* Stacks them vertically on mobile */
         width: 100%; /* Full width on mobile */
         margin-top: 20px;
+    }
+
+    /* Reduce height of the header image on mobile */
+    .header-image-container {
+        height: 50vh; /* Set the height to 50% of the screen height */
     }
 
     /* Remove gap between the image and About Us section on mobile */
