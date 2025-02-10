@@ -27,7 +27,7 @@ nav {
 }
 
 nav .container {
-    text-align: center;
+    text-align: right; /* Align the links to the right */
 }
 
 nav a {
@@ -80,12 +80,15 @@ header p {
 .header-image-container {
     width: 100%;
     text-align: center;
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
 }
 
 .header-image {
     width: 100%;
     height: auto;
     max-width: 100%;
+    margin-top: 0; /* Remove the margin that could cause extra space */
 }
 
 /* About Us Section (Solid White with Shadow) */
