@@ -28,14 +28,14 @@ nav {
 
 nav .container {
     display: flex; /* Use flexbox to align logo and links */
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: space-between; /* Space between logo and links */
     align-items: center; /* Vertically center items */
 }
 
 nav a {
     color: #fff; /* White text for links */
     text-decoration: none;
-    margin: 0 10px; /* Decrease the space between links */
+    margin: 0 15px;
     font-size: 1.2em;
 }
 
@@ -81,18 +81,12 @@ header .container {
     font-weight: bold;
 }
 
-/* About Us and Contact Us Section - Align Them Side by Side */
-.about-us, .contact {
-    display: inline-block;
-    width: 48%; /* Make them take up 48% of the space to have them side by side */
-    vertical-align: top;
-    margin-top: 20px;
-}
-
+/* About Us Section (Solid White with Shadow) */
 .about-us {
     background: #fff; /* Solid white background */
     padding: 30px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
+    margin-top: -1px; /* Adjust this if the gap persists */
 }
 
 .about-us h2 {
@@ -100,6 +94,7 @@ header .container {
     color: #0077cc;
 }
 
+/* Contact Section (Solid White with Shadow) */
 .contact {
     background: #fff; /* Solid white background */
     padding: 30px 0;
@@ -176,13 +171,6 @@ footer {
         font-size: 14px;
     }
 
-    /* Stack About Us and Contact Us Sections */
-    .about-us, .contact {
-        display: block; /* Stacks them vertically on mobile */
-        width: 100%; /* Full width on mobile */
-        margin-top: 20px;
-    }
-
     /* Remove gap between the image and About Us section on mobile */
     .about-us {
         margin-top: 0; /* No gap above the About Us section */
@@ -193,4 +181,35 @@ footer {
         padding: 0; /* Ensure no padding around the image */
         margin: 0; /* Remove any margin */
     }
+}
+
+/* Cookie Consent */
+.cookie-consent {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+
+.cookie-consent button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.cookie-consent button.deny-btn {
+    background-color: #cc0000;
+}
+
+/* Hide Cookie Consent Bar After Clicking */
+.cookie-consent.hide {
+    display: none;
 }
