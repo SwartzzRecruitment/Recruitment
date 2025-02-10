@@ -156,9 +156,10 @@ footer {
 
 /* Mobile-Friendly Image Styling */
 @media screen and (max-width: 768px) {
-    header img {
+    header .header-image {
+        object-fit: cover; /* Ensure the hero image scales correctly */
         width: 100%;
-        max-width: 100%;  /* Ensure it fills the available space */
+        height: 100vh; /* Maintain full height on mobile */
     }
 
     header h1 {
