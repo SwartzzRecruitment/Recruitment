@@ -42,54 +42,34 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Header */
-header {
-    background-color: #0077cc; /* Blue background */
-    color: #fff;
-    padding: 50px 0;
-    text-align: center;
-}
-
-/* Fade-in animation for header text */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Apply animation to h1 and p */
-header h1, header p {
-    opacity: 0; /* Start with text hidden */
-    animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation */
-    animation-fill-mode: forwards; /* Ensure the final state (opacity: 1) is maintained */
-}
-
-header h1 {
-    font-size: 3em;
-}
-
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Image in header */
+/* Header with Video */
 .header-image-container {
+    position: relative;
     width: 100%;
-    text-align: center;
-    margin: 0; /* Remove any margin */
-    padding: 0; /* Remove any padding */
+    height: 100vh; /* Makes the video full screen */
+    overflow: hidden;
 }
 
 .header-image {
+    object-fit: cover; /* Ensures the video covers the entire container */
     width: 100%;
-    height: auto;
-    max-width: 100%;
-    margin-top: 0; /* Remove the margin that could cause extra space */
-    display: block; /* Ensure no inline-block behavior which could introduce spacing */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensures text/content appears above the video */
+}
+
+/* Style for text over the video */
+header .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust text color to make it visible on the video */
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 /* About Us Section (Solid White with Shadow) */
