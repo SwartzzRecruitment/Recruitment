@@ -39,10 +39,11 @@ nav a {
     font-size: 1.2em;
 }
 
-/* Logo */
+/* Logo (Aligned to the Left) */
 nav .logo {
     height: 40px; /* Set logo height (adjust as needed) */
     width: auto; /* Keep aspect ratio */
+    margin-right: auto; /* Align logo to the left */
 }
 
 /* Navigation Links on Hover */
