@@ -89,6 +89,7 @@ header p {
     height: auto;
     max-width: 100%;
     margin-top: 0; /* Remove the margin that could cause extra space */
+    display: block; /* Ensure no inline-block behavior which could introduce spacing */
 }
 
 /* About Us Section (Solid White with Shadow) */
@@ -96,7 +97,7 @@ header p {
     background: #fff; /* Solid white background */
     padding: 30px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
-    margin-top: 0; /* Ensure there's no margin above it */
+    margin-top: -1px; /* Adjust this if the gap persists */
 }
 
 .about-us h2 {
