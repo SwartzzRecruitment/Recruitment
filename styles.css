@@ -40,6 +40,7 @@ nav .logo {
 nav .nav-links {
     display: flex; /* Align links side by side */
     justify-content: flex-end; /* Align links to the right */
+    flex-grow: 1; /* Make sure it takes the remaining space */
 }
 
 nav a {
