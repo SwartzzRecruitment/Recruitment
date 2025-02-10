@@ -20,13 +20,34 @@ body {
     padding: 20px;
 }
 
+/* Navigation Bar */
+nav {
+    background-color: #0077cc; /* Set background color to blue */
+    padding: 10px 0;
+}
+
+nav .container {
+    text-align: center;
+}
+
+nav a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+/* Navigation Links on Hover */
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* Header */
 header {
-    background: #0077cc;
+    background-color: #0077cc; /* Blue background */
     color: #fff;
     padding: 50px 0;
     text-align: center;
-    margin-top: 0; /* Remove any gap above the header */
 }
 
 /* Fade-in animation for header text */
