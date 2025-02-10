@@ -28,14 +28,18 @@ nav {
 
 nav .container {
     display: flex; /* Use flexbox to align logo and links */
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: space-between; /* Space between logo and links */
     align-items: center; /* Vertically center items */
 }
 
 nav .logo {
     height: 40px; /* Set logo height (adjust as needed) */
     width: auto; /* Keep aspect ratio */
-    margin-left: auto; /* Push logo to the left side */
+}
+
+nav .nav-links {
+    display: flex; /* Align links side by side */
+    justify-content: flex-end; /* Align links to the right */
 }
 
 nav a {
