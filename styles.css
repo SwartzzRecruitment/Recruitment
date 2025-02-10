@@ -117,7 +117,7 @@ header img {
 
 /* Footer */
 footer {
-    background: #333;
+    background: #0077cc;  /* Changed from #333 to #0077cc */
     color: #fff;
     text-align: center;
     padding: 20px 0;
