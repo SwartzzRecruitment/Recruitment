@@ -81,12 +81,18 @@ header .container {
     font-weight: bold;
 }
 
-/* About Us Section (Solid White with Shadow) */
+/* About Us and Contact Us Section - Align Them Side by Side */
+.about-us, .contact {
+    display: inline-block;
+    width: 48%; /* Make them take up 48% of the space to have them side by side */
+    vertical-align: top;
+    margin-top: 20px;
+}
+
 .about-us {
     background: #fff; /* Solid white background */
     padding: 30px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
-    margin-top: -1px; /* Adjust this if the gap persists */
 }
 
 .about-us h2 {
@@ -94,7 +100,6 @@ header .container {
     color: #0077cc;
 }
 
-/* Contact Section (Solid White with Shadow) */
 .contact {
     background: #fff; /* Solid white background */
     padding: 30px 0;
@@ -169,6 +174,13 @@ footer {
 
     .contact a {
         font-size: 14px;
+    }
+
+    /* Stack About Us and Contact Us Sections */
+    .about-us, .contact {
+        display: block; /* Stacks them vertically on mobile */
+        width: 100%; /* Full width on mobile */
+        margin-top: 20px;
     }
 
     /* Remove gap between the image and About Us section on mobile */
