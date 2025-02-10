@@ -20,7 +20,7 @@ body {
     padding: 20px;
 }
 
-/* Logo Positioned to the Top Left */
+/* Logo Positioned to the Top Left (out of nav) */
 .logo-container {
     position: absolute; /* Fixed position relative to the screen */
     top: 20px;
@@ -37,18 +37,18 @@ body {
 nav {
     background-color: #0077cc; /* Set background color to blue */
     padding: 10px 0;
-    display: flex;
-    justify-content: flex-end; /* Align links to the right */
     position: relative; /* Needed for z-index stacking */
     z-index: 5; /* Keeps links behind the logo */
 }
 
 /* Navigation Links Container */
-nav .nav-links {
-    display: flex; /* Align links side by side */
+nav .container {
+    display: flex; /* Align the navigation content */
+    justify-content: flex-end; /* Align links to the right */
     align-items: center; /* Vertically center the links */
 }
 
+/* Navigation Links */
 nav a {
     color: #fff; /* White text for links */
     text-decoration: none;
