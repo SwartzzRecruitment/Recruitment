@@ -181,4 +181,15 @@ footer {
     .contact a {
         font-size: 14px;
     }
+
+    /* Remove gap between the image and About Us section on mobile */
+    .about-us {
+        margin-top: 0; /* No gap above the About Us section */
+        padding-top: 0; /* Remove any extra padding */
+    }
+
+    .header-image-container {
+        padding: 0; /* Ensure no padding around the image */
+        margin: 0; /* Remove any margin */
+    }
 }
