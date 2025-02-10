@@ -8,6 +8,69 @@
     <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
     
     <style>
+        /* Reset body and html margin/padding to ensure there are no gaps */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #0077cc;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 10;
+            text-align: right;
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #0077cc;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 60px; /* Ensure the header is not hidden under the nav */
+        }
+        header p {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* Image Section */
+        .header-image-container {
+            width: 100%;
+            text-align: center; /* Center the image */
+        }
+        .header-image {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            box-shadow: none; /* Remove any shadow */
+        }
+
+        /* Content Section */
+        .container {
+            padding: 0 20px; /* Add padding to the sides */
+            max-width: 1200px; /* Max width for larger screens */
+            margin: 0 auto; /* Center content horizontally */
+        }
+
+        /* Cookie Consent */
         .cookie-consent {
             background-color: #333;
             color: white;
@@ -42,56 +105,7 @@
         .cookie-consent .deny-btn:hover {
             background-color: #aa2929;
         }
-        /* Navigation Bar Styling */
-        nav {
-            background-color: #0077cc;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            z-index: 10;
-            text-align: right;
-        }
-        nav a {
-            color: white;
-            font-size: 18px;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        /* Header Section */
-        header {
-            background-color: #0077cc;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 80px; /* To avoid overlap with navigation bar */
-        }
-        header p {
-            font-size: 20px;
-            color: white;
-            margin-bottom: 15px;
-        }
-        /* Image Section */
-        .header-image-container {
-            width: 100%;
-            text-align: center; /* Center the image */
-        }
-        .header-image {
-            display: block;
-            margin: 0 auto;
-            width: 100%;
-            height: auto;
-            box-shadow: none; /* Remove any shadow */
-        }
-        /* Content Section */
-        .container {
-            padding: 0 20px; /* Add padding to the sides */
-            max-width: 1200px; /* Max width for larger screens */
-            margin: 0 auto; /* Center content horizontally */
-        }
+
     </style>
 
     <script>
@@ -150,7 +164,7 @@
     <section id="about-us" class="about-us">
         <div class="container">
             <h2>About Us</h2>
-            <p>At Swartzz Recruitment, we provide on-demand recruitment services, connecting businesses with highly skilled cybersecurity professionals who are not only capable of safeguarding digital assets but are also equipped to proactively mitigate risks and strengthen your organization's overall security infrastructure. Our flexible recruitment approach ensures you get the right talent when you need it, helping your business stay ahead in an increasingly complex and threat-filled digital landscape. Whether you're looking to enhance your team’s cybersecurity expertise or need a trusted partner to fill critical roles quickly, we work closely with you to find the perfect fit</p>
+            <p>At Swartzz Recruitment, we provide on-demand recruitment services, connecting businesses with highly skilled cybersecurity professionals who are not only capable of safeguarding digital assets but are also equipped to proactively mitigate risks and strengthen your organization's overall security infrastructure. Our flexible recruitment approach ensures you get the right talent when you need it, helping your business stay ahead in an increasingly complex and threat-filled digital landscape. Whether you're looking to enhance your team’s cybersecurity expertise or need a trusted partner to fill critical roles quickly, we work closely with you to find the perfect fit.</p>
         </div>
     </section>
 
