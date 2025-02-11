@@ -62,7 +62,7 @@ nav a:hover {
 .header-image-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* Full viewport height for desktop */
     overflow: hidden;
 }
 
@@ -73,7 +73,7 @@ nav a:hover {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures the video fills the container */
     z-index: -1;
 }
 
@@ -154,11 +154,25 @@ footer {
 /* Mobile-Friendly Image Styling */
 @media screen and (max-width: 768px) {
     .header-image-container {
-        height: 60vh;
+        height: 60vh; /* Reduce the height of the video for mobile */
+    }
+
+    .header-video {
+        object-fit: cover; /* Keeps the video covering the area */
     }
 
     header .container {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjust text size for mobile */
+        padding: 0 10px; /* Ensure some padding around the text */
+    }
+
+    /* Optional: you can also adjust the position of text on mobile */
+    header .container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
     }
 
     .logo-container {
