@@ -244,3 +244,9 @@ footer {
         z-index: -1;
     }
 }
+
+/* Updated style for the inquiry text */
+.contact p {
+    font-size: 1.2em; /* Same size as About Us paragraph text */
+    color: #333; /* Standard text color */
+}
