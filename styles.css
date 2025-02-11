@@ -73,8 +73,8 @@ nav a:hover {
     justify-content: center; /* Ensure the video is centered horizontally */
     align-items: center; /* Center video vertically */
     z-index: -1; /* Ensures content appears above the video */
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .header-video {
