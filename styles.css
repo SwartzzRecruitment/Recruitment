@@ -23,7 +23,7 @@ body {
 /* Logo Positioned to the Top Left (out of nav) */
 .logo-container {
     position: absolute; /* Fixed position relative to the screen */
-    top: 20px;
+    top: 40px; /* Increased the space between the logo and the top */
     left: 20px;
     z-index: 10; /* Keep the logo above everything else */
 }
