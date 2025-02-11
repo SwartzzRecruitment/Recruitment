@@ -24,7 +24,7 @@ body {
 .logo-container {
     position: absolute; /* Fixed position relative to the screen */
     top: 20px; /* Adjusted top space */
-    left: 20px;
+    left: 30px; /* Increased left space */
     z-index: 10; /* Keep the logo above everything else */
 }
 
@@ -46,7 +46,7 @@ nav .container {
     display: flex; /* Align the navigation content */
     justify-content: flex-end; /* Align links to the right */
     align-items: center; /* Vertically center the links */
-    padding-top: 10px; /* Adjusted padding-top for better alignment */
+    padding-top: 15px; /* Adjusted padding-top for better alignment */
 }
 
 /* Navigation Links */
@@ -171,8 +171,8 @@ footer {
     /* Adjust logo position for mobile */
     .logo-container {
         position: absolute;
-        top: 10px; /* Reduced top margin to move it down */
-        left: 20px;
+        top: 10px; /* Adjusted to prevent overlap */
+        left: 30px; /* Added space from the left side */
         z-index: 10;
     }
 
@@ -188,11 +188,6 @@ footer {
     /* Adjust font size for navigation links */
     nav a {
         font-size: 1em; /* Smaller font size for mobile */
-    }
-
-    /* Adjust padding and margins to prevent overlap */
-    nav .container {
-        padding-top: 15px; /* Smaller padding-top to keep spacing neat */
     }
 
     .about-us h2, .contact h2 {
