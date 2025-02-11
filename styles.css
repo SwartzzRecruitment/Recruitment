@@ -170,7 +170,7 @@ footer {
     /* Adjust logo position for mobile */
     .logo-container {
         position: absolute;
-        top: 5px;
+        top: 10px; /* Increased top margin to avoid overlap */
         left: 20px;
         z-index: 10;
     }
@@ -232,4 +232,3 @@ footer {
         z-index: -1;
     }
 }
-
