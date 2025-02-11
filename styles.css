@@ -20,10 +20,10 @@ body {
     padding: 20px;
 }
 
-/* Logo Positioned to the Top Left (out of nav) */
+/* Logo and Navigation Positioned Horizontally */
 .logo-container {
     position: absolute; /* Fixed position relative to the screen */
-    top: 40px; /* Increased the space between the logo and the top */
+    top: 40px; /* Adjusted space from the top */
     left: 20px;
     z-index: 10; /* Keep the logo above everything else */
 }
@@ -43,7 +43,7 @@ nav {
 
 /* Navigation Links Container */
 nav .container {
-    display: flex; /* Align the navigation content */
+    display: flex; /* Align the navigation content horizontally */
     justify-content: flex-end; /* Align links to the right */
     align-items: center; /* Vertically center the links */
 }
@@ -52,7 +52,7 @@ nav .container {
 nav a {
     color: #fff; /* White text for links */
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 15px; /* Space between links */
     font-size: 1.2em;
 }
 
@@ -182,7 +182,7 @@ footer {
     /* Adjust logo position for mobile */
     .logo-container {
         position: absolute;
-        top: 20px; /* Increased top position to create more space from the top */
+        top: 40px; /* Keep the top position at 40px */
         left: 20px;
         z-index: 10;
     }
