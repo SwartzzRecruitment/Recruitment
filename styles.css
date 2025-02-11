@@ -23,8 +23,8 @@ body {
 /* Logo Positioned to the Top Left (out of nav) */
 .logo-container {
     position: absolute; /* Fixed position relative to the screen */
-    top: 20px;
-    left: 20px;
+    top: 25px; /* Increase space from the top */
+    left: 20px; /* Keep left margin consistent */
     z-index: 10; /* Keep the logo above everything else */
 }
 
@@ -170,8 +170,8 @@ footer {
     /* Adjust logo position for mobile */
     .logo-container {
         position: absolute;
-        top: 10px; /* Increased top margin to avoid overlap */
-        left: 20px;
+        top: 15px; /* Increased top margin further */
+        left: 20px; /* Keep left margin consistent */
         z-index: 10;
     }
 
