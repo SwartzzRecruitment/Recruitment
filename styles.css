@@ -23,8 +23,8 @@ body {
 /* Logo Positioned to the Top Left (out of nav) */
 .logo-container {
     position: absolute; /* Fixed position relative to the screen */
-    top: 20px; /* Adjusted top space */
-    left: 30px; /* Increased left space */
+    top: 20px;
+    left: 20px;
     z-index: 10; /* Keep the logo above everything else */
 }
 
@@ -46,14 +46,13 @@ nav .container {
     display: flex; /* Align the navigation content */
     justify-content: flex-end; /* Align links to the right */
     align-items: center; /* Vertically center the links */
-    padding-top: 15px; /* Adjusted padding-top for better alignment */
 }
 
 /* Navigation Links */
 nav a {
     color: #fff; /* White text for links */
     text-decoration: none;
-    margin: 0 15px; /* Reduced margin for better spacing */
+    margin: 0 15px;
     font-size: 1.2em;
 }
 
@@ -102,6 +101,18 @@ header .container {
     padding: 30px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
     margin-top: 0; /* Remove margin-top */
+}
+
+/* About Us Text Size and Color */
+.about-us h2 {
+    font-size: 2em; /* Match the size of Contact Us */
+    color: #0077cc; /* Make the text blue like Contact Us */
+}
+
+/* About Us Paragraph Style */
+.about-us p {
+    font-size: 1.2em; /* Adjust the paragraph size */
+    color: #333; /* Maintain normal text color */
 }
 
 /* Contact Section (Solid White with Shadow) */
@@ -171,8 +182,8 @@ footer {
     /* Adjust logo position for mobile */
     .logo-container {
         position: absolute;
-        top: 10px; /* Adjusted to prevent overlap */
-        left: 30px; /* Added space from the left side */
+        top: 5px;
+        left: 20px;
         z-index: 10;
     }
 
