@@ -22,59 +22,61 @@ body {
 
 /* Logo Positioned to the Top Left (out of nav) */
 .logo-container {
-    position: absolute;
+    position: absolute; /* Fixed position relative to the screen */
     top: 20px;
     left: 20px;
-    z-index: 10;
+    z-index: 10; /* Keep the logo above everything else */
 }
 
 .logo {
-    height: 40px;
-    width: auto;
+    height: 40px; /* Set logo height (adjust as needed) */
+    width: auto; /* Keep aspect ratio */
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #0077cc;
+    background-color: #0077cc; /* Set background color to blue */
     padding: 10px 0;
-    position: relative;
-    z-index: 5;
+    position: relative; /* Needed for z-index stacking */
+    z-index: 5; /* Keeps links behind the logo */
 }
 
+/* Navigation Links Container */
 nav .container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    display: flex; /* Align the navigation content */
+    justify-content: flex-end; /* Align links to the right */
+    align-items: center; /* Vertically center the links */
 }
 
+/* Navigation Links */
 nav a {
-    color: #fff;
+    color: #fff; /* White text for links */
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.2em;
 }
 
+/* Navigation Links on Hover */
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Hero Video Section */
+/* Header with Video */
 .header-image-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height for desktop */
+    height: 100vh; /* Makes the image full screen */
     overflow: hidden;
 }
 
 .header-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center video */
+    object-fit: cover; /* Ensures the video covers the entire container */
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video fills the container */
-    z-index: -1;
+    height: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensures text/content appears above the video */
 }
 
 /* Style for text over the video */
@@ -84,18 +86,17 @@ header .container {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: white; /* Adjust text color to make it visible on the video */
     font-size: 2rem;
     font-weight: bold;
-    z-index: 1;
 }
 
-/* About Us Section */
+/* About Us Section (Solid White with Shadow) */
 .about-us {
-    background: #fff;
+    background: #fff; /* Solid white background */
     padding: 30px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
+    margin-top: 80px; /* Increased margin-top to create more space below the logo */
 }
 
 .about-us h2 {
@@ -103,11 +104,11 @@ header .container {
     color: #0077cc;
 }
 
-/* Contact Section */
+/* Contact Section (Solid White with Shadow) */
 .contact {
-    background: #fff;
+    background: #fff; /* Solid white background */
     padding: 30px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
 }
 
 .contact h2 {
@@ -128,57 +129,65 @@ header .container {
 .contact a {
     color: #0077cc;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 16px; /* Consistent font size for email & phone */
 }
 
+/* LinkedIn Icon */
 .contact a img {
-    width: 30px;
+    width: 30px;  /* Reverted back to the original size */
     height: 30px;
     vertical-align: middle;
-    margin-right: 10px;
-    transition: transform 0.3s ease;
+    margin-right: 10px; /* Space between icon and text */
+    transition: transform 0.3s ease; /* Smooth transition effect */
 }
 
+/* LinkedIn Icon Hover Effect */
 .contact a:hover img {
-    transform: scale(1.2);
+    transform: scale(1.2);  /* Icon will grow to 120% when hovered */
 }
 
 /* Footer */
 footer {
-    background: #0077cc;
+    background: #0077cc;  /* Changed from #333 to #0077cc */
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Mobile-Friendly Image Styling */
+/* Mobile-Friendly Video Styling */
 @media screen and (max-width: 768px) {
+    /* Ensure hero video properly scales on mobile */
     .header-image-container {
-        height: 60vh; /* Reduce the height of the video for mobile */
+        position: relative;
+        height: 60vh; /* Reduce height for mobile */
     }
 
     .header-video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Keep the video centered */
+        object-fit: cover; /* Ensure the video scales correctly */
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Ensures the video fills the container */
     }
 
-    header .container {
-        font-size: 1.5rem; /* Adjust text size for mobile */
-        padding: 0 10px; /* Ensure some padding around the text */
-    }
-
+    /* Adjust logo position for mobile */
     .logo-container {
+        position: absolute;
         top: 5px;
         left: 20px;
+        z-index: 10;
     }
 
-    nav a {
+    /* Adjusting text inside header */
+    header h1 {
+        font-size: 1.8em; /* Reduced text size */
+    }
+
+    header p {
         font-size: 1em;
+    }
+
+    /* Adjust font size for navigation links */
+    nav a {
+        font-size: 1em; /* Smaller font size for mobile */
     }
 
     .about-us h2, .contact h2 {
@@ -193,9 +202,15 @@ footer {
         font-size: 14px;
     }
 
+    /* Remove gap between the video and About Us section on mobile */
     .about-us {
-        margin-top: 60px;
-        padding-top: 0;
+        margin-top: 60px; /* Increased margin-top to create more space on mobile */
+        padding-top: 0; /* Remove any extra padding */
+    }
+
+    .header-image-container {
+        padding: 0; /* Ensure no padding around the video */
+        margin: 0; /* Remove any margin */
     }
 }
 
@@ -225,6 +240,7 @@ footer {
     background-color: #cc0000;
 }
 
+/* Hide Cookie Consent Bar After Clicking */
 .cookie-consent.hide {
     display: none;
 }
