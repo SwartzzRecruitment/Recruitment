@@ -68,7 +68,7 @@ nav a:hover {
     height: 100vh; /* Makes the image full screen */
     overflow: hidden;
     display: flex;
-    justify-content: center; /* Ensure the video is centered */
+    justify-content: center; /* Ensure the video is centered horizontally */
     align-items: center; /* Center video vertically */
     z-index: -1; /* Ensures content appears above the video */
 }
