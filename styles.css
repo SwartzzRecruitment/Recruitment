@@ -46,6 +46,9 @@ nav .container {
     display: flex; /* Align the navigation content horizontally */
     justify-content: flex-end; /* Align links to the right */
     align-items: center; /* Vertically center the links */
+    position: absolute; /* Ensure it's horizontally aligned with the logo */
+    top: 40px; /* Same top position as logo */
+    right: 20px; /* Space from the right side */
 }
 
 /* Navigation Links */
