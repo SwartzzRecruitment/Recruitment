@@ -67,15 +67,12 @@ nav a:hover {
     width: 100%;
     height: 100vh; /* Full screen height */
     overflow: hidden;
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
 }
 
 .header-video {
     object-fit: cover; /* Ensures the video covers the entire container */
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -157,22 +154,62 @@ footer {
     padding: 20px 0;
 }
 
-/* Desktop-only Fixes for Hero Image */
-@media screen and (min-width: 1024px) {
+/* Mobile-Friendly Video Styling */
+@media screen and (max-width: 768px) {
+    /* Ensure hero video properly scales on mobile */
     .header-image-container {
-        width: 100%;
-        height: 100vh; /* Full screen */
-        margin: 0;
-        padding: 0;
+        position: relative;
+        height: 60vh; /* Reduce height for mobile */
     }
 
     .header-video {
-        object-fit: cover; /* Ensure the video fills the entire space */
-        width: 100vw; /* Full width of the viewport */
-        height: 100vh; /* Full height of the viewport */
+        object-fit: cover; /* Ensure the video scales correctly */
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Adjust logo position for mobile */
+    .logo-container {
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
+        top: 5px;
+        left: 20px;
+        z-index: 10;
+    }
+
+    /* Adjusting text inside header */
+    header h1 {
+        font-size: 1.8em; /* Reduced text size */
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    /* Adjust font size for navigation links */
+    nav a {
+        font-size: 1em; /* Smaller font size for mobile */
+    }
+
+    .about-us h2, .contact h2 {
+        font-size: 1.5em;
+    }
+
+    .contact ul li {
+        font-size: 1em;
+    }
+
+    .contact a {
+        font-size: 14px;
+    }
+
+    /* Remove gap between the video and About Us section on mobile */
+    .about-us {
+        margin-top: 60px; /* Increased margin-top to create more space on mobile */
+        padding-top: 0; /* Remove any extra padding */
+    }
+
+    .header-image-container {
+        padding: 0; /* Ensure no padding around the video */
+        margin: 0; /* Remove any margin */
     }
 }
