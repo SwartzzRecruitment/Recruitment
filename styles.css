@@ -1,19 +1,26 @@
-/* HERO IMAGE - Ensure it scales properly on all screens */
-.header-image-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full screen height */
-    overflow: hidden;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header-image {
-    object-fit: cover;
-    width: 100%;
-    height: 100vh; /* Ensure it fills the screen */
-    display: block;
+/* Body & General Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* LOGO - Position normally on desktop */
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Logo Positioned to the Top Left (out of nav) */
 .logo-container {
     position: absolute;
     top: 20px;
@@ -26,7 +33,7 @@
     width: auto;
 }
 
-/* NAVIGATION - Prevent links from hiding behind the logo */
+/* Navigation Bar */
 nav {
     background-color: #0077cc;
     padding: 10px 0;
@@ -34,7 +41,6 @@ nav {
     z-index: 5;
 }
 
-/* NAV LINKS */
 nav .container {
     display: flex;
     justify-content: flex-end;
@@ -48,7 +54,30 @@ nav a {
     font-size: 1.2em;
 }
 
-/* HERO TEXT */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Video Section */
+.header-image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Style for text over the video */
 header .container {
     position: absolute;
     top: 50%;
@@ -58,40 +87,133 @@ header .container {
     color: white;
     font-size: 2rem;
     font-weight: bold;
+    z-index: 1;
 }
 
-/* === MOBILE STYLES === */
+/* About Us Section */
+.about-us {
+    background: #fff;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.about-us h2 {
+    font-size: 2em;
+    color: #0077cc;
+}
+
+/* Contact Section */
+.contact {
+    background: #fff;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 2em;
+    color: #0077cc;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #0077cc;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contact a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact a:hover img {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background: #0077cc;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Mobile-Friendly Image Styling */
 @media screen and (max-width: 768px) {
-    /* Resize hero image for mobile */
     .header-image-container {
-        height: 60vh; /* Smaller height on mobile */
+        height: 60vh;
     }
 
-    .header-image {
-        height: 60vh; /* Keep proportions */
+    header .container {
+        font-size: 1.5rem;
     }
 
-    /* MOVE LOGO OVER HERO IMAGE ON MOBILE */
     .logo-container {
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .logo {
-        height: 50px; /* Slightly bigger logo on mobile */
-    }
-
-    /* Reduce text size for better spacing */
-    header h1 {
-        font-size: 1.8em;
+        top: 5px;
+        left: 20px;
     }
 
     nav a {
-        font-size: 1em; /* Smaller links */
+        font-size: 1em;
+    }
+
+    .about-us h2, .contact h2 {
+        font-size: 1.5em;
+    }
+
+    .contact ul li {
+        font-size: 1em;
+    }
+
+    .contact a {
+        font-size: 14px;
     }
 
     .about-us {
-        margin-top: 50px;
+        margin-top: 60px;
+        padding-top: 0;
     }
+}
+
+/* Cookie Consent */
+.cookie-consent {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+
+.cookie-consent button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.cookie-consent button.deny-btn {
+    background-color: #cc0000;
+}
+
+.cookie-consent.hide {
+    display: none;
 }
