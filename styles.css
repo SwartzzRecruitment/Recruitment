@@ -180,6 +180,9 @@ footer {
         object-fit: cover; /* Ensure the video scales correctly */
         width: 100%;
         height: 100%;
+        display: block; /* Ensures the video is displayed */
+        autoplay: true; /* Ensures autoplay */
+        muted: true; /* Mutes the video for mobile */
     }
 
     /* Adjust logo position for mobile */
