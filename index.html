@@ -26,7 +26,7 @@
             left: 0;
         }
 
-        /* Fallback image in case the video is not supported */
+        /* Fallback image for browsers that do not support the video tag */
         .fallback-image {
             width: 100%;
             height: 100%;
@@ -34,6 +34,11 @@
             position: absolute;
             top: 0;
             left: 0;
+        }
+
+        /* Hide the fallback image when video is playing */
+        .video-playing .fallback-image {
+            display: none;
         }
     </style>
 </head>
@@ -54,7 +59,7 @@
 
     <!-- Hero Image (Video) Section Below Header -->
     <div class="header-image-container">
-        <video class="header-image" autoplay loop muted playsinline>
+        <video class="header-image" id="video" autoplay loop muted playsinline>
             <source src="https://raw.githubusercontent.com/SwartzzRecruitment/Recruitment/refs/heads/master/3141210-Uhd%203840%202160%2025Fps(1).mp4" type="video/mp4">
             <!-- Fallback image for browsers that do not support the video tag -->
             <img src="https://via.placeholder.com/1920x1080?text=Hero+Image+Fallback" alt="Fallback Image" class="fallback-image">
@@ -133,11 +138,15 @@
     </section>
 
     <script>
-        function togglePrivacyPolicy() {
-            const privacySection = document.getElementById('privacy-policy');
-            privacySection.style.display = (privacySection.style.display === 'none' || privacySection.style.display === '') ? 'block' : 'none';
-        }
+        // Function to force the video to play
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById('video');
+            if (video) {
+                video.play().catch(function(error) {
+                    console.log("Autoplay failed: " + error);
+                });
+            }
+        });
     </script>
 </body>
 </html>
-
