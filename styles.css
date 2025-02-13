@@ -158,7 +158,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 10px; /* Adjusted for better alignment */
+    margin-top: 10px;
+    clear: both;  /* Clear any floating elements */
 }
 
 /* Privacy Policy Toggle */
@@ -166,7 +167,7 @@ footer {
     display: none;
     background: #fff;
     padding: 20px;
-    margin-top: 10px; /* Reduced margin to close the gap */
+    margin-top: 0; /* Removed margin-top to reduce gap */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
