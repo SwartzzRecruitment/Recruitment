@@ -138,7 +138,7 @@
     </section>
 
     <script>
-        // Function to force the video to play
+        // Force the video to play on all devices
         document.addEventListener("DOMContentLoaded", function() {
             var video = document.getElementById('video');
             if (video) {
@@ -147,6 +147,15 @@
                 });
             }
         });
+
+        // Toggle visibility of the Privacy Policy section
+        function togglePrivacyPolicy() {
+            var policySection = document.getElementById('privacy-policy');
+            policySection.style.display = (policySection.style.display === 'none') ? 'block' : 'none';
+            if (policySection.style.display === 'block') {
+                policySection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     </script>
 </body>
 </html>
