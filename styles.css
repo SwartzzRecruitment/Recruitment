@@ -22,44 +22,41 @@ body {
 
 /* Logo and Navigation Positioned Horizontally */
 .logo-container {
-    position: absolute; /* Fixed position relative to the screen */
-    top: 40px; /* Adjusted space from the top */
+    position: absolute;
+    top: 40px;
     left: 20px;
-    z-index: 10; /* Keep the logo above everything else */
+    z-index: 10;
 }
 
 .logo {
-    height: 40px; /* Set logo height (adjust as needed) */
-    width: auto; /* Keep aspect ratio */
+    height: 40px;
+    width: auto;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #0077cc; /* Set background color to blue */
+    background-color: #0077cc;
     padding: 10px 0;
-    position: relative; /* Needed for z-index stacking */
-    z-index: 5; /* Keeps links behind the logo */
+    position: relative;
+    z-index: 5;
 }
 
-/* Navigation Links Container */
 nav .container {
-    display: flex; /* Align the navigation content horizontally */
-    justify-content: flex-end; /* Align links to the right */
-    align-items: center; /* Vertically center the links */
-    position: absolute; /* Ensure it's horizontally aligned with the logo */
-    top: 40px; /* Same top position as logo */
-    right: 20px; /* Space from the right side */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    right: 20px;
 }
 
-/* Navigation Links */
 nav a {
-    color: #fff; /* White text for links */
+    color: #fff;
     text-decoration: none;
-    margin: 0 15px; /* Space between links */
+    margin: 0 15px;
     font-size: 1.2em;
 }
 
-/* Navigation Links on Hover */
 nav a:hover {
     text-decoration: underline;
 }
@@ -68,61 +65,58 @@ nav a:hover {
 .header-image-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full screen height */
+    height: 100vh;
     overflow: hidden;
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    margin-bottom: 0; /* Remove bottom margin */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
 }
 
 .header-video {
-    object-fit: cover; /* Ensures the video covers the entire container */
-    width: 100%; /* Set to 100% to fill the container */
-    height: 100%; /* Set to 100% to cover the height */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Ensures text/content appears above the video */
+    z-index: -1;
 }
 
-/* Style for text over the video */
 header .container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white; /* Adjust text color to make it visible on the video */
+    color: white;
     font-size: 2rem;
     font-weight: bold;
 }
 
-/* About Us Section (Solid White with Shadow) */
+/* About Us Section */
 .about-us {
-    background: #fff; /* Solid white background */
+    background: #fff;
     padding: 30px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
-    margin-top: 0; /* Remove margin-top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
 }
 
-/* About Us Text Size and Color */
 .about-us h2 {
-    font-size: 2em; /* Match the size of Contact Us */
-    color: #0077cc; /* Make the text blue like Contact Us */
+    font-size: 2em;
+    color: #0077cc;
 }
 
-/* About Us Paragraph Style */
 .about-us p {
-    font-size: 1.2em; /* Adjust the paragraph size */
-    color: #333; /* Maintain normal text color */
+    font-size: 1.2em;
+    color: #333;
 }
 
-/* Contact Section (Solid White with Shadow) */
+/* Contact Section */
 .contact {
-    background: #fff; /* Solid white background */
+    background: #fff;
     padding: 30px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added soft shadow effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact h2 {
@@ -143,69 +137,66 @@ header .container {
 .contact a {
     color: #0077cc;
     text-decoration: none;
-    font-size: 16px; /* Consistent font size for email & phone */
+    font-size: 16px;
 }
 
-/* LinkedIn Icon */
 .contact a img {
-    width: 30px;  /* Reverted back to the original size */
+    width: 30px;
     height: 30px;
     vertical-align: middle;
-    margin-right: 10px; /* Space between icon and text */
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    margin-right: 10px;
+    transition: transform 0.3s ease;
 }
 
-/* LinkedIn Icon Hover Effect */
 .contact a:hover img {
-    transform: scale(1.2);  /* Icon will grow to 120% when hovered */
+    transform: scale(1.2);
 }
 
 /* Footer */
 footer {
-    background: #0077cc;  /* Changed from #333 to #0077cc */
+    background: #0077cc;
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Mobile-Friendly Video Styling */
+/* Privacy Policy Toggle */
+#privacy-policy {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile-Friendly Adjustments */
 @media screen and (max-width: 768px) {
-    /* Ensure hero video properly scales on mobile */
     .header-image-container {
-        position: relative;
-        height: 60vh; /* Reduce height for mobile */
+        height: 60vh;
     }
 
     .header-video {
-        object-fit: cover; /* Ensure the video scales correctly */
+        object-fit: cover;
         width: 100%;
         height: 100%;
-        display: block; /* Ensures the video is displayed */
-        autoplay: true; /* Ensures autoplay */
-        muted: true; /* Mutes the video for mobile */
+        display: block;
     }
 
-    /* Adjust logo position for mobile */
     .logo-container {
-        position: absolute;
-        top: 40px; /* Keep the top position at 40px */
+        top: 40px;
         left: 20px;
-        z-index: 10;
     }
 
-    /* Adjusting text inside header */
     header h1 {
-        font-size: 1.8em; /* Reduced text size */
+        font-size: 1.8em;
     }
 
     header p {
         font-size: 1em;
     }
 
-    /* Adjust font size for navigation links */
     nav a {
-        font-size: 1em; /* Smaller font size for mobile */
-        margin: 0 15px; /* Keep default spacing between the links */
+        font-size: 1em;
     }
 
     .about-us h2, .contact h2 {
@@ -220,31 +211,29 @@ footer {
         font-size: 14px;
     }
 
-    /* Remove gap between the video and About Us section on mobile */
     .about-us {
-        margin-top: 0; /* Remove margin-top */
-        padding-top: 0; /* Remove any extra padding */
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .header-image-container {
-        padding: 0; /* Ensure no padding around the video */
-        margin: 0; /* Remove any margin */
+        padding: 0;
+        margin: 0;
     }
 }
 
-/* Desktop-only Fixes for Hero Image */
 @media screen and (min-width: 1024px) {
     .header-image-container {
         width: 100%;
-        height: 100vh; /* Full screen */
+        height: 100vh;
         margin: 0;
         padding: 0;
     }
 
     .header-video {
-        object-fit: cover; /* Ensure the video fills the entire space */
-        width: 100%; /* Full width of the container */
-        height: 100%; /* Full height of the container */
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -252,8 +241,7 @@ footer {
     }
 }
 
-/* Updated style for the inquiry text */
 .contact p {
-    font-size: 1.2em; /* Same size as About Us paragraph text */
-    color: #333; /* Standard text color */
+    font-size: 1.2em;
+    color: #333;
 }
