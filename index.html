@@ -6,8 +6,36 @@
     <meta name="description" content="Swartzz Recruitment connects businesses with highly skilled cybersecurity professionals and other specialists like MIG & TIG welders, providing on-demand recruitment services.">
     <meta name="keywords" content="recruitment, cybersecurity, MIG welding, TIG welding, recruitment agency, recruitment services">
     <meta name="author" content="Swartzz Recruitment">
-    <meta name="robots" content="index, follow"> <!-- Allows search engines to index and follow links -->
-    <title>Swartzz Recruitment</title>
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Swartzz Recruitment - Connecting businesses with reliable talent">
+    <meta property="og:description" content="Specializing in cybersecurity recruitment alongside MIG & TIG welding roles, Swartzz Recruitment connects businesses with reliable talent.">
+    <meta property="og:image" content="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true">
+    <meta property="og:url" content="https://swartzzrecruitment.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Structured Data for Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Swartzz Recruitment",
+        "url": "https://swartzzrecruitment.github.io",
+        "logo": "https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true",
+        "sameAs": [
+            "https://www.linkedin.com/in/swartzzrecruitment"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "swartzzinc@gmail.com",
+            "telephone": "+447385166005",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+
+    <title>Swartzz Recruitment - Connecting businesses with reliable talent</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
 
@@ -17,158 +45,110 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        
         gtag('config', 'G-26MDHD0JRB');
     </script>
-
-    <style>
-        /* Hero Image Container to Fill the Viewport */
-        .header-image-container {
-            position: relative;
-            width: 100%;
-            height: 100vh; /* Full viewport height */
-            overflow: hidden;
-        }
-
-        /* Video Style: Ensures the video or image fully covers the container */
-        .header-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the video covers the entire area */
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        /* Fallback image for browsers that do not support the video tag */
-        .fallback-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the fallback image covers the entire area */
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        /* Hide the fallback image when video is playing */
-        .video-playing .fallback-image {
-            display: none;
-        }
-    </style>
 </head>
 <body>
 
     <!-- Logo Positioned to the Top Left -->
     <div class="logo-container">
-        <a href="#"><img src="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20logo.jpeg?raw=true" alt="Swartzz Recruitment Logo" class="logo"></a>
+        <a href="https://swartzzrecruitment.github.io">
+            <img src="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20logo.jpeg?raw=true" alt="Swartzz Recruitment Logo" class="logo">
+        </a>
     </div>
 
     <!-- Navigation Bar -->
     <nav>
         <div class="container">
-            <a href="#about-us">About Us</a>
-            <a href="#contact-us">Contact Us</a>
+            <a href="#about-us" aria-label="Learn more about Swartzz Recruitment">About Us</a>
+            <a href="#contact-us" aria-label="Get in touch with Swartzz Recruitment">Contact Us</a>
         </div>
     </nav>
 
-    <!-- Hero Image (Video) Section Below Header -->
+    <!-- Hero Video Section -->
     <div class="header-image-container">
         <video class="header-image" id="video" autoplay loop muted playsinline preload="auto">
             <source src="https://raw.githubusercontent.com/SwartzzRecruitment/Recruitment/refs/heads/master/3141210-Uhd%203840%202160%2025Fps(1).mp4" type="video/mp4">
-            <!-- Fallback image for browsers that do not support the video tag -->
-            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Fallback Image" class="fallback-image">
+            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Fallback Image of cybersecurity team" class="fallback-image">
             Your browser does not support the video tag.
         </video>
     </div>
 
+    <!-- About Us Section -->
     <section id="about-us" class="about-us">
         <div class="container">
             <h2>About Us</h2>
-            <p>At Swartzz Recruitment, we provide on-demand recruitment services, connecting businesses with highly skilled cybersecurity professionals who are not only capable of safeguarding digital assets but are also equipped to proactively mitigate risks and strengthen your organization's overall security infrastructure. Our flexible recruitment approach ensures you get the right talent when you need it, helping your business stay ahead in an increasingly complex and threat-filled digital landscape. Whether you're looking to enhance your team’s cybersecurity expertise or need a trusted partner to fill critical roles quickly, we work closely with you to find the perfect fit.</p>
+            <p>At Swartzz Recruitment, we provide on-demand recruitment services, connecting businesses with highly skilled cybersecurity professionals and experienced MIG & TIG welders. Our flexible recruitment approach ensures you get the right talent when you need it, helping your business stay ahead in an increasingly complex landscape.</p>
         </div>
     </section>
 
+    <!-- Contact Us Section -->
     <section id="contact-us" class="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>For inquiries, collaborations, or to learn more about our recruitment services, feel free to reach out:</p>
+            <p>For inquiries or collaborations, contact us through the following channels:</p>
             <ul>
                 <li>
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
-                    <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a>
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon">
+                    <a href="mailto:swartzzinc@gmail.com" aria-label="Email Swartzz Recruitment">swartzzinc@gmail.com</a>
                 </li>
                 <li>
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
-                    <a href="tel:+447385166005">+447385166005</a>
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon">
+                    <a href="tel:+447385166005" aria-label="Call Swartzz Recruitment">+447385166005</a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+                    <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank" rel="noopener noreferrer" aria-label="Visit Swartzz Recruitment LinkedIn profile">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
                     </a>
                 </li>
             </ul>
         </div>
     </section>
 
+    <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
             <h2>FAQs</h2>
             <h3>What industries do you specialize in?</h3>
-            <p>We focus on cybersecurity recruitment, and we also do a little work in MIG & TIG welding.</p>
+            <p>We focus on cybersecurity recruitment and also work in MIG & TIG welding.</p>
             <h3>How do I apply for jobs through Swartzz Recruitment?</h3>
-            <p>We do not list jobs on our website. Instead, we connect with candidates directly. Feel free to contact us via email or phone.</p>
+            <p>We connect with candidates directly; contact us via email or phone.</p>
             <h3>Do you work with international clients?</h3>
-            <p>No, for the time being, we purely stick to UK-based clients.</p>
+            <p>No, we currently serve UK-based clients only.</p>
             <h3>Is there a fee for job seekers?</h3>
             <p>No, our services are free for job seekers.</p>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Swartzz Recruitment. All Rights Reserved.</p>
             <p style="text-align: right;">
-                <a href="javascript:void(0);" onclick="togglePrivacyPolicy()">Privacy Policy</a>
+                <a href="javascript:void(0);" onclick="togglePrivacyPolicy()" aria-label="View Privacy Policy">Privacy Policy</a>
             </p>
         </div>
     </footer>
 
+    <!-- Privacy Policy Section -->
     <section id="privacy-policy" style="display: none;">
         <div class="container">
             <h2>Privacy Policy</h2>
-            <h3>Information We Collect</h3>
-            <p>We do not collect personal data through our website. Any information provided is done through direct communication (email or phone). We respect your privacy and only collect necessary details for the purpose of communication.</p>
-            <h3>How We Use Your Information</h3>
-            <p>Your information is used solely for communication purposes related to recruitment services.</p>
-            <h3>Cookies</h3>
-            <p>We do not collect any cookies or personal information via our website.</p>
-            <h3>Security</h3>
-            <p>We take precautions to protect your data when it is shared directly with us.</p>
-            <h3>Your Rights</h3>
-            <p>You may request access, correction, or deletion of your data if it is collected during communication.</p>
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a></p>
+            <p>We do not collect personal data through our website. Information provided through direct communication is used solely for recruitment purposes.</p>
         </div>
     </section>
 
+    <!-- JavaScript for Video Playback and Privacy Policy Toggle -->
     <script>
-        // Force the video to play on all devices
         document.addEventListener("DOMContentLoaded", function() {
             var video = document.getElementById('video');
-            if (video) {
-                video.play().catch(function(error) {
-                    console.log("Autoplay failed: " + error);
-                });
-            }
+            video.play().catch(error => console.log("Autoplay failed: " + error));
         });
 
-        // Toggle visibility of the Privacy Policy section
         function togglePrivacyPolicy() {
             var policySection = document.getElementById('privacy-policy');
             policySection.style.display = (policySection.style.display === 'none') ? 'block' : 'none';
-            if (policySection.style.display === 'block') {
-                policySection.scrollIntoView({ behavior: 'smooth' });
-            }
+            policySection.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>
