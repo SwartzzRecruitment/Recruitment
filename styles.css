@@ -152,6 +152,17 @@ header .container {
     transform: scale(1.2);
 }
 
+/* Social Media Icon Size - Ensure both icons are the same size */
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
 /* Footer */
 footer {
     background: #0077cc;
@@ -166,8 +177,7 @@ footer {
 #privacy-policy {
     display: none;
     background: #fff;
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
