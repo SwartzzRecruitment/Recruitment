@@ -157,6 +157,7 @@ header .container {
     width: 30px; /* Ensuring size consistency */
     height: 30px; /* Ensuring size consistency */
     border-radius: 0; /* Ensuring square shape */
+    object-fit: cover; /* Ensuring the icon stays within the square */
     transition: transform 0.3s ease;
 }
 
@@ -264,4 +265,3 @@ footer a {
     font-size: 1.2em;
     color: #333;
 }
-
