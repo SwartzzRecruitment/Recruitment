@@ -54,6 +54,17 @@
         .video-playing .fallback-image {
             display: none;
         }
+
+        /* Hover Effect for Social Media Icons */
+        .social-icon-link img {
+            width: 24px; 
+            height: 24px;
+            transition: transform 0.3s ease; /* Smooth scaling effect */
+        }
+
+        .social-icon-link:hover img {
+            transform: scale(1.1); /* Scale the icon on hover */
+        }
     </style>
 </head>
 <body>
@@ -104,6 +115,12 @@
                 <li>
                     <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+                    </a>
+                </li>
+                <!-- Facebook Link with Image and Hover Effect -->
+                <li>
+                    <a href="https://www.facebook.com/YourFacebookPage" target="_blank" class="social-icon-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
                     </a>
                 </li>
             </ul>
