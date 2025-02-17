@@ -118,8 +118,8 @@ header .container {
     padding: 30px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: flex-end;  /* Align items to the right */
-    gap: 15px;  /* Space between icons */
+    flex-direction: column; /* Stack the contact details vertically */
+    align-items: flex-start; /* Align the items to the left */
 }
 
 .contact h2 {
@@ -130,12 +130,13 @@ header .container {
 .contact ul {
     list-style-type: none;
     padding-left: 0;
-    display: flex;  /* Align list items horizontally */
+    display: flex;  /* Keep social icons inline */
     gap: 15px;  /* Space between icons */
+    margin-top: 20px; /* Add some spacing between contact details and icons */
 }
 
 .contact ul li {
-    display: inline-block;  /* Ensure items are inline */
+    display: inline-block;
 }
 
 .contact a {
@@ -153,18 +154,6 @@ header .container {
 }
 
 .contact a:hover img {
-    transform: scale(1.2);
-}
-
-/* New Facebook Icon Style */
-.contact a.facebook img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-
-.contact a.facebook:hover img {
     transform: scale(1.2);
 }
 
