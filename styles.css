@@ -152,6 +152,18 @@ header .container {
     transform: scale(1.2);
 }
 
+/* New Facebook Icon Style */
+.contact a.facebook img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact a.facebook:hover img {
+    transform: scale(1.2);
+}
+
 /* Footer */
 footer {
     background: #0077cc;
