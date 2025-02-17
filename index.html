@@ -20,6 +20,74 @@
         gtag('config', 'G-26MDHD0JRB');
     </script>
 
+    <style>
+        /* Hero Image Container to Fill the Viewport */
+        .header-image-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .fallback-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .video-playing .fallback-image {
+            display: none;
+        }
+
+        /* Contact Section Styling */
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            font-size: 16px;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon-link img {
+            width: 26px; 
+            height: 26px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon-link:hover img {
+            transform: scale(1.4);
+        }
+    </style>
 </head>
 <body>
 
