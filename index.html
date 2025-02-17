@@ -67,25 +67,41 @@
         }
 
         /* Social Icons Horizontal Layout */
-        .social-icons {
+        .social-icons-horizontal {
             display: flex;
             justify-content: flex-start;
             list-style-type: none;
             padding-left: 0;
         }
 
-        .social-icons li {
+        .social-icons-horizontal li {
             margin-right: 20px;
         }
 
-        .social-icons img {
+        .social-icons-horizontal img {
             width: 24px; 
             height: 24px;
             transition: transform 0.3s ease;
         }
 
-        .social-icons li:hover img {
+        .social-icons-horizontal li:hover img {
             transform: scale(1.1); /* Scale the icon on hover */
+        }
+
+        /* Social Icons Vertical Layout for Contact Info */
+        .contact-info ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px; /* Space between phone and email */
+        }
+
+        .contact-info img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -125,26 +141,30 @@
         <div class="container">
             <h2>Contact Us</h2>
             <p>For inquiries, collaborations, or to learn more about our recruitment services, feel free to reach out:</p>
-            <ul class="social-icons">
-                <li>
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon">
-                    <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a>
-                </li>
-                <li>
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon">
-                    <a href="tel:+447385166005">+447385166005</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/YourFacebookPage" target="_blank" class="social-icon-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-                    </a>
-                </li>
-            </ul>
+            <div class="contact-info">
+                <ul>
+                    <li>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon">
+                        <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a>
+                    </li>
+                    <li>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon">
+                        <a href="tel:+447385166005">+447385166005</a>
+                    </li>
+                </ul>
+                <ul class="social-icons-horizontal">
+                    <li>
+                        <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/YourFacebookPage" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
