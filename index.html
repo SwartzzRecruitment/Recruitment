@@ -6,7 +6,7 @@
     <meta name="description" content="Swartzz Recruitment connects businesses with highly skilled cybersecurity professionals and other specialists like MIG & TIG welders, providing on-demand recruitment services.">
     <meta name="keywords" content="recruitment, cybersecurity, MIG welding, TIG welding, recruitment agency, recruitment services">
     <meta name="author" content="Swartzz Recruitment">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow"> <!-- Allows search engines to index and follow links -->
     <title>Swartzz Recruitment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
@@ -65,49 +65,6 @@
         .social-icon-link:hover img {
             transform: scale(1.1); /* Scale the icon on hover */
         }
-
-        /* Social Icons Horizontal Layout */
-        .social-icons-horizontal {
-            display: flex;
-            justify-content: flex-start;
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 20px;
-        }
-
-        .social-icons-horizontal li {
-            margin-right: 20px;
-        }
-
-        .social-icons-horizontal img {
-            width: 24px; 
-            height: 24px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons-horizontal li:hover img {
-            transform: scale(1.1); /* Scale the icon on hover */
-        }
-
-        /* Contact Info Vertical Layout */
-        .contact-info ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-bottom: 20px;
-        }
-
-        .contact-info li {
-            margin-bottom: 10px; /* Space between phone and email */
-            display: flex;
-            align-items: center; /* Align icons and text horizontally */
-        }
-
-        .contact-info img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-
     </style>
 </head>
 <body>
@@ -146,31 +103,27 @@
         <div class="container">
             <h2>Contact Us</h2>
             <p>For inquiries, collaborations, or to learn more about our recruitment services, feel free to reach out:</p>
-            <div class="contact-info">
-                <ul>
-                    <li>
-                        <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon">
-                        <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a>
-                    </li>
-                    <li>
-                        <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon">
-                        <a href="tel:+447385166005">+447385166005</a>
-                    </li>
-                </ul>
-                <!-- Social Media Icons placed horizontally -->
-                <ul class="social-icons-horizontal">
-                    <li>
-                        <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
-                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/YourFacebookPage" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li>
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
+                    <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a>
+                </li>
+                <li>
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
+                    <a href="tel:+447385166005">+447385166005</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+                    </a>
+                </li>
+                <!-- Facebook Link with Image and Hover Effect -->
+                <li>
+                    <a href="https://www.facebook.com/YourFacebookPage" target="_blank" class="social-icon-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+                    </a>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -219,13 +172,20 @@
         // Force the video to play on all devices
         document.addEventListener("DOMContentLoaded", function() {
             var video = document.getElementById('video');
-            video.play();
+            if (video) {
+                video.play().catch(function(error) {
+                    console.log("Autoplay failed: " + error);
+                });
+            }
         });
 
-        // Toggle privacy policy visibility
+        // Toggle visibility of the Privacy Policy section
         function togglePrivacyPolicy() {
-            var privacySection = document.getElementById('privacy-policy');
-            privacySection.style.display = privacySection.style.display === 'none' ? 'block' : 'none';
+            var policySection = document.getElementById('privacy-policy');
+            policySection.style.display = (policySection.style.display === 'none') ? 'block' : 'none';
+            if (policySection.style.display === 'block') {
+                policySection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     </script>
 </body>
