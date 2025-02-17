@@ -154,10 +154,11 @@ header .container {
 
 /* Social Media Icon Size - Ensuring Square Shape for Facebook */
 .social-icons a img {
-    width: 30px; /* Ensuring size consistency */
-    height: 30px; /* Ensuring size consistency */
-    border-radius: 0; /* Ensuring square shape */
-    object-fit: cover; /* Ensuring the icon stays within the square */
+    width: 30px; /* Set width */
+    height: 30px; /* Set height */
+    display: block; /* Ensures it behaves like a block element */
+    border-radius: 0; /* Ensuring no rounding to stay square */
+    object-fit: contain; /* Ensure the icon is fully visible and stays within the square */
     transition: transform 0.3s ease;
 }
 
