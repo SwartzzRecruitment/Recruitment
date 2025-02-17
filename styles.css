@@ -154,8 +154,8 @@ header .container {
 
 /* Social Media Icon Size - Ensure both icons are the same size */
 .social-icons a img {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     transition: transform 0.3s ease;
 }
 
