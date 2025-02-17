@@ -149,7 +149,7 @@ header .container {
 }
 
 .contact a:hover img {
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 /* Social Media Icon Size - Ensure both icons are the same size */
@@ -160,7 +160,7 @@ header .container {
 }
 
 .social-icons a:hover img {
-    transform: scale(2.2);
+    transform: scale(1.5);
 }
 
 /* Footer */
