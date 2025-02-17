@@ -6,7 +6,7 @@
     <meta name="description" content="Swartzz Recruitment connects businesses with highly skilled cybersecurity professionals and other specialists like MIG & TIG welders, providing on-demand recruitment services.">
     <meta name="keywords" content="recruitment, cybersecurity, MIG welding, TIG welding, recruitment agency, recruitment services">
     <meta name="author" content="Swartzz Recruitment">
-    <meta name="robots" content="index, follow"> <!-- Allows search engines to index and follow links -->
+    <meta name="robots" content="index, follow">
     <title>Swartzz Recruitment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
@@ -26,44 +26,67 @@
         .header-image-container {
             position: relative;
             width: 100%;
-            height: 100vh; /* Full viewport height */
+            height: 100vh;
             overflow: hidden;
         }
 
-        /* Video Style: Ensures the video or image fully covers the container */
         .header-image {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the video covers the entire area */
+            object-fit: cover;
             position: absolute;
             top: 0;
             left: 0;
         }
 
-        /* Fallback image for browsers that do not support the video tag */
         .fallback-image {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the fallback image covers the entire area */
+            object-fit: cover;
             position: absolute;
             top: 0;
             left: 0;
         }
 
-        /* Hide the fallback image when video is playing */
         .video-playing .fallback-image {
             display: none;
         }
 
-        /* Hover Effect for Social Media Icons */
+        /* Contact Section Styling */
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            font-size: 16px;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
         .social-icon-link img {
             width: 24px; 
             height: 24px;
-            transition: transform 0.3s ease; /* Smooth scaling effect */
+            transition: transform 0.3s ease;
         }
 
         .social-icon-link:hover img {
-            transform: scale(1.1); /* Scale the icon on hover */
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -82,12 +105,11 @@
         </div>
     </nav>
 
-    <!-- Hero Image (Video) Section Below Header -->
+    <!-- Hero Image (Video) Section -->
     <div class="header-image-container">
-        <video class="header-image" id="video" autoplay loop muted playsinline preload="auto" poster="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" oncanplay="this.classList.add('video-playing');">
+        <video class="header-image" id="video" autoplay loop muted playsinline preload="auto" poster="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" oncanplay="this.classList.add('video-playing');">
             <source src="https://raw.githubusercontent.com/SwartzzRecruitment/Recruitment/refs/heads/master/3141210-Uhd%203840%202160%2025Fps(1).mp4" type="video/mp4">
-            <!-- Fallback image for browsers that do not support the video tag -->
-            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Fallback Image" class="fallback-image">
+            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="Fallback Image" class="fallback-image">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -95,7 +117,7 @@
     <section id="about-us" class="about-us">
         <div class="container">
             <h2>About Us</h2>
-            <p>At Swartzz Recruitment, we provide on demand recruitment services, connecting businesses with highly skilled cybersecurity professionals who are not only capable of safeguarding digital assets but are also equipped to proactively mitigate risks and strengthen your organization's overall security infrastructure. Our flexible recruitment approach ensures you get the right talent when you need it, helping your business stay ahead in an increasingly complex and threat filled digital landscape. Whether you're looking to enhance your team’s cybersecurity expertise or need a trusted partner to fill critical roles quickly, we work closely with you to find the perfect fit.</p>
+            <p>At Swartzz Recruitment, we provide on-demand recruitment services, connecting businesses with highly skilled cybersecurity professionals...</p>
         </div>
     </section>
 
@@ -103,41 +125,28 @@
         <div class="container">
             <h2>Contact Us</h2>
             <p>For inquiries, collaborations, or to learn more about our recruitment services, feel free to reach out:</p>
-            <ul>
-                <li>
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
-                    <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a>
-                </li>
-                <li>
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
-                    <a href="tel:+447385166005">+447385166005</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 24px; height: 24px;">
-                    </a>
-                </li>
-                <!-- Facebook Link with Image and Hover Effect -->
-                <li>
-                    <a href="https://www.facebook.com/YourFacebookPage" target="_blank" class="social-icon-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
 
-    <section class="faq">
-        <div class="container">
-            <h2>FAQs</h2>
-            <h3>What industries do you specialize in?</h3>
-            <p>We focus on cybersecurity recruitment, and we also do a little work in MIG & TIG welding.</p>
-            <h3>How do I apply for jobs through Swartzz Recruitment?</h3>
-            <p>We do not list jobs on our website. Instead, we connect with candidates directly. Feel free to contact us via email or phone.</p>
-            <h3>Do you work with international clients?</h3>
-            <p>No, for the time being, we purely stick to UK based clients.</p>
-            <h3>Is there a fee for job seekers?</h3>
-            <p>No, our services are free for job seekers.</p>
+            <!-- Contact Details (Email & Phone - Vertical Layout) -->
+            <div class="contact-links">
+                <a href="mailto:swartzzinc@gmail.com" class="contact-item">
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon" class="contact-icon">
+                    swartzzinc@gmail.com
+                </a>
+                <a href="tel:+447385166005" class="contact-item">
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon" class="contact-icon">
+                    +447385166005
+                </a>
+            </div>
+
+            <!-- Social Media Icons (Facebook & LinkedIn - Horizontal Layout) -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank" class="social-icon-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.facebook.com/YourFacebookPage" target="_blank" class="social-icon-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+            </div>
         </div>
     </section>
 
@@ -150,24 +159,6 @@
         </div>
     </footer>
 
-    <section id="privacy-policy" style="display: none;">
-        <div class="container">
-            <h2>Privacy Policy</h2>
-            <h3>Information We Collect</h3>
-            <p>We do not collect personal data through our website. Any information provided is done through direct communication (email or phone). We respect your privacy and only collect necessary details for the purpose of communication.</p>
-            <h3>How We Use Your Information</h3>
-            <p>Your information is used solely for communication purposes related to recruitment services.</p>
-            <h3>Cookies</h3>
-            <p>We do not collect any cookies or personal information via our website.</p>
-            <h3>Security</h3>
-            <p>We take precautions to protect your data when it is shared directly with us.</p>
-            <h3>Your Rights</h3>
-            <p>You may request access, correction, or deletion of your data if it is collected during communication.</p>
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a></p>
-        </div>
-    </section>
-
     <script>
         // Force the video to play on all devices
         document.addEventListener("DOMContentLoaded", function() {
@@ -179,7 +170,7 @@
             }
         });
 
-        // Toggle visibility of the Privacy Policy section
+        // Toggle Privacy Policy Section
         function togglePrivacyPolicy() {
             var policySection = document.getElementById('privacy-policy');
             policySection.style.display = (policySection.style.display === 'none') ? 'block' : 'none';
@@ -188,5 +179,6 @@
             }
         }
     </script>
+
 </body>
 </html>
