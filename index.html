@@ -6,7 +6,7 @@
     <meta name="description" content="Swartzz Recruitment connects businesses with highly skilled cybersecurity professionals and other specialists like MIG & TIG welders, providing on-demand recruitment services.">
     <meta name="keywords" content="recruitment, cybersecurity, MIG welding, TIG welding, recruitment agency, recruitment services">
     <meta name="author" content="Swartzz Recruitment">
-    <meta name="robots" content="index, follow"> <!-- Allows search engines to index and follow links -->
+    <meta name="robots" content="index, follow">
     <title>Swartzz Recruitment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Owl%202.png?raw=true" type="image/png">
@@ -65,6 +65,28 @@
         .social-icon-link:hover img {
             transform: scale(1.1); /* Scale the icon on hover */
         }
+
+        /* Social Icons Horizontal Layout */
+        .social-icons {
+            display: flex;
+            justify-content: flex-start;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .social-icons li {
+            margin-right: 20px;
+        }
+
+        .social-icons img {
+            width: 24px; 
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons li:hover img {
+            transform: scale(1.1); /* Scale the icon on hover */
+        }
     </style>
 </head>
 <body>
@@ -103,24 +125,23 @@
         <div class="container">
             <h2>Contact Us</h2>
             <p>For inquiries, collaborations, or to learn more about our recruitment services, feel free to reach out:</p>
-            <ul>
+            <ul class="social-icons">
                 <li>
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon">
                     <a href="mailto:swartzzinc@gmail.com">swartzzinc@gmail.com</a>
                 </li>
                 <li>
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/421/107/original/phone-cell-icon-vector-illustration.jpg" alt="Phone Icon">
                     <a href="tel:+447385166005">+447385166005</a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
                     </a>
                 </li>
-                <!-- Facebook Link with Image and Hover Effect -->
                 <li>
                     <a href="https://www.facebook.com/YourFacebookPage" target="_blank" class="social-icon-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
                     </a>
                 </li>
             </ul>
@@ -172,20 +193,13 @@
         // Force the video to play on all devices
         document.addEventListener("DOMContentLoaded", function() {
             var video = document.getElementById('video');
-            if (video) {
-                video.play().catch(function(error) {
-                    console.log("Autoplay failed: " + error);
-                });
-            }
+            video.play();
         });
 
-        // Toggle visibility of the Privacy Policy section
+        // Toggle privacy policy visibility
         function togglePrivacyPolicy() {
-            var policySection = document.getElementById('privacy-policy');
-            policySection.style.display = (policySection.style.display === 'none') ? 'block' : 'none';
-            if (policySection.style.display === 'block') {
-                policySection.scrollIntoView({ behavior: 'smooth' });
-            }
+            var privacySection = document.getElementById('privacy-policy');
+            privacySection.style.display = privacySection.style.display === 'none' ? 'block' : 'none';
         }
     </script>
 </body>
