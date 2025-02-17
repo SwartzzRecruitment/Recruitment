@@ -154,12 +154,13 @@ header .container {
 
 /* Social Media Icon Size - Ensure both icons are the same size */
 .social-icons a img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
+    width: 30px; /* Ensuring size consistency */
+    height: 30px; /* Ensuring size consistency */
+    border-radius: 0; /* Makes the icon square */
     transition: transform 0.3s ease;
 }
 
+/* Hover effect for social icons */
 .social-icons a:hover img {
     transform: scale(1.3);
 }
