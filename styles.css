@@ -130,11 +130,12 @@ header .container {
 .contact ul {
     list-style-type: none;
     padding-left: 0;
+    display: flex;  /* Align list items horizontally */
+    gap: 15px;  /* Space between icons */
 }
 
 .contact ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
+    display: inline-block;  /* Ensure items are inline */
 }
 
 .contact a {
