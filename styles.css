@@ -156,8 +156,8 @@ header .container {
 .social-icons a img {
     width: 30px; /* Set width */
     height: 30px; /* Set height */
-    border-radius: 0%; /* Ensures square, removing any rounding (from circle) */
-    object-fit: contain; /* Ensure the icon fits inside the square */
+    border-radius: 0%; /* Ensure it's square */
+    object-fit: cover; /* Make sure the icon fits perfectly in a square without distortion */
     transition: transform 0.3s ease;
 }
 
