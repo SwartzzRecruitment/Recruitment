@@ -8,18 +8,11 @@
     <meta name="author" content="Swartzz Recruitment">
     <meta name="robots" content="index, follow">
     <title>Swartzz Recruitment</title>
-
-    <!-- External CSS and JS links -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter|Poppins|Quicksand|Roboto">
-    <link href="https://cdn.jsdelivr.net/npm/swiper@8.0.6/swiper-bundle.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-    <!-- Favicon -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon Link (Direct GitHub URL for your favicon) -->
     <link rel="icon" href="https://raw.githubusercontent.com/SwartzzRecruitment/Recruitment/main/android-chrome-512x512.png" type="image/x-icon">
-    
-    <!-- Google Tag Manager -->
+
+    <!-- Google Analytics Integration -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-26MDHD0JRB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -29,44 +22,7 @@
     </script>
 
     <style>
-        /* Main Styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-        }
-
-        .logo-container {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 10;
-        }
-
-        .logo-container img {
-            height: 60px;
-        }
-
-        nav {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: flex-end;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #0077cc;
-            font-weight: bold;
-        }
-
+        /* Hero Image Container to Fill the Viewport */
         .header-image-container {
             position: relative;
             width: 100%;
@@ -96,16 +52,7 @@
             display: none;
         }
 
-        .container {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            color: #003366;
-        }
-
+        /* Contact Section Styling */
         .contact-links {
             display: flex;
             flex-direction: column;
@@ -136,37 +83,28 @@
             width: 26px; 
             height: 26px;
             transition: transform 0.3s ease;
-            border-radius: 0;
+            border-radius: 0; /* Ensure icons are square */
         }
 
         .social-icon-link:hover img {
             transform: scale(1.4);
         }
 
-        .faq h3 {
-            margin-top: 20px;
-        }
-
-        footer {
-            background-color: #f5f5f5;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        footer a {
-            text-decoration: underline;
-            color: #0077cc;
+        /* Square Facebook Icon */
+        .social-icon-link img[src="https://cdn-icons-png.flaticon.com/512/145/145802.png"] {
+            border-radius: 0;  /* Ensure it's a square */
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
 
-    <!-- Logo -->
+    <!-- Logo Positioned to the Top Left -->
     <div class="logo-container">
         <a href="#"><img src="https://github.com/SwartzzRecruitment/Recruitment/blob/master/Swartzz%20Logo%20(BG%20Removed).png?raw=true" alt="Swartzz Recruitment Logo" class="logo"></a>
     </div>
 
-    <!-- Navbar -->
+    <!-- Navigation Bar -->
     <nav>
         <div class="container">
             <a href="#about-us">About Us</a>
@@ -174,7 +112,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Image (Video) Section -->
     <div class="header-image-container">
         <video class="header-image" id="video" autoplay loop muted playsinline preload="auto" poster="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" oncanplay="this.classList.add('video-playing');">
             <source src="https://videos.pexels.com/video-files/3129957/3129957-sd_640_360_25fps.mp4" type="video/mp4">
@@ -183,7 +121,6 @@
         </video>
     </div>
 
-    <!-- About Section -->
     <section id="about-us" class="about-us">
         <div class="container">
             <h2>About Us</h2>
@@ -191,11 +128,12 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact-us" class="contact">
         <div class="container">
             <h2>Contact Us</h2>
             <p>For inquiries, collaborations, or to learn more about our recruitment services, feel free to reach out:</p>
+
+            <!-- Contact Details (Email & Phone - Vertical Layout) -->
             <div class="contact-links">
                 <a href="mailto:swartzzinc@gmail.com" class="contact-item">
                     <img src="https://static.vecteezy.com/system/resources/previews/000/421/942/original/vector-email-icon.jpg" alt="Email Icon" class="contact-icon">
@@ -206,10 +144,13 @@
                     +447385166005
                 </a>
             </div>
+
+            <!-- Social Media Icons (Facebook & LinkedIn - Horizontal Layout) -->
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/swartzzrecruitment" target="_blank" class="social-icon-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
                 </a>
+                <!-- Corrected Facebook Icon from Flaticon -->
                 <a href="https://www.facebook.com/YourFacebookPage" target="_blank" class="social-icon-link">
                     <img src="https://cdn-icons-png.flaticon.com/128/15047/15047435.png" alt="Facebook">
                 </a>
@@ -217,7 +158,7 @@
         </div>
     </section>
 
-    <!-- FAQs -->
+    <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
             <h2>FAQs</h2>
@@ -232,12 +173,12 @@
         </div>
     </section>
 
-    <!-- Privacy Policy (Hidden by default) -->
+    <!-- Privacy Policy Section -->
     <section id="privacy-policy" style="display: none;">
         <div class="container">
             <h2>Privacy Policy</h2>
             <h3>Information We Collect</h3>
-            <p>We do not collect personal data through our website. Any information provided is done through direct communication (email or phone).</p>
+            <p>We do not collect personal data through our website. Any information provided is done through direct communication (email or phone). We respect your privacy and only collect necessary details for the purpose of communication.</p>
             <h3>How We Use Your Information</h3>
             <p>Your information is used solely for communication purposes related to recruitment services.</p>
             <h3>Cookies</h3>
@@ -251,16 +192,19 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Swartzz Recruitment. All Rights Reserved.</p>
-            <p style="text-align: right;"><a href="javascript:void(0);" onclick="togglePrivacyPolicy()">Privacy Policy</a></p>
+            <p style="text-align: right;">
+                <a href="javascript:void(0);" onclick="togglePrivacyPolicy()">Privacy Policy</a>
+            </p>
         </div>
     </footer>
 
-    <!-- JS -->
+    <!-- JavaScript -->
     <script>
+        // Force the video to play on all devices
         document.addEventListener("DOMContentLoaded", function() {
             var video = document.getElementById('video');
             if (video) {
@@ -270,6 +214,7 @@
             }
         });
 
+        // Toggle Privacy Policy Section
         function togglePrivacyPolicy() {
             var policySection = document.getElementById('privacy-policy');
             policySection.style.display = (policySection.style.display === 'none') ? 'block' : 'none';
