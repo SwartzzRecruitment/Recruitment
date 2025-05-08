@@ -119,14 +119,27 @@
         </div>
     </nav>
 
-    <!-- Hero Image (Video) Section -->
-    <div class="header-image-container">
-        <video class="header-image" id="video" autoplay loop muted playsinline preload="auto" poster="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" oncanplay="this.classList.add('video-playing');">
-            <source src="https://videos.pexels.com/video-files/3129957/3129957-sd_640_360_25fps.mp4" type="video/mp4">
-            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="Fallback Image" class="fallback-image">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+   <!-- Hero Image (Video) Section -->
+<div class="header-image-container">
+    <video class="header-image" id="video" autoplay loop muted playsinline preload="auto" poster="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" oncanplay="this.classList.add('video-playing');">
+        <source src="https://videos.pexels.com/video-files/3129957/3129957-sd_640_360_25fps.mp4" type="video/mp4">
+        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="Fallback Image" class="fallback-image">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    // Fallback: If autoplay doesn't work, trigger the video on user interaction
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('video');
+        if (video) {
+            video.play().catch(function(error) {
+                console.log('Video autoplay failed:', error);
+                // Optional: Prompt user to interact for video to play
+            });
+        }
+    });
+</script>
 
     <section id="about-us" class="about-us">
         <div class="container">
